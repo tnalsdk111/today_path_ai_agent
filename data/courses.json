@@ -1,0 +1,2434 @@
+[
+  {
+    "id": "course-1-01",
+    "name": "광교호수공원 순환 코스",
+    "dong": "상현1동",
+    "distance_km": 3.0,
+    "duration_min": 45,
+    "is_loop": true,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.280934,
+          "lng": 127.066803,
+          "name": "광교푸른숲도서관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.276295,
+          "lng": 127.060321,
+          "name": "광교에일린의뜰단지내상가",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.287957,
+          "lng": 127.062171,
+          "name": "광교힐스테이트레이크 상가",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "나루터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "신대호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.285874,
+          "lng": 127.059487,
+          "name": "수원컨벤션센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.286582,
+          "lng": 127.055974,
+          "name": "롯데아울렛 광교점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.273953,
+          "lng": 127.060605,
+          "name": "앨리웨이광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "어번레비",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.287039,
+          "lng": 127.057709,
+          "name": "엘포트몰",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "자작나무쉼터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "원천호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "재미난밭",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "전망대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "정다운",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.279254,
+          "lng": 127.068223,
+          "name": "(주) 휴세코 광교지점 희망주유소",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.285334,
+          "lng": 127.057268,
+          "name": "갤러리아 광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "행복한들",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.2751,
+          "lng": 127.06378,
+          "name": "관리사무소",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.272227,
+          "lng": 127.066932,
+          "name": "영덕레스피아",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 20,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "{sobFospfW]bDvF|EApEcDbJqObB_LvBeXgBeFaF?iGpEs@vK~@nFqG~LJrBqCnHUjE}C",
+    "start_point": {
+      "lat": 37.276939,
+      "lng": 127.06632
+    }
+  },
+  {
+    "id": "course-1-02",
+    "name": "광교호수공원 반바퀴 코스 (동측)",
+    "dong": "상현1동",
+    "distance_km": 1.5,
+    "duration_min": 22,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.280934,
+          "lng": 127.066803,
+          "name": "광교푸른숲도서관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.276295,
+          "lng": 127.060321,
+          "name": "광교에일린의뜰단지내상가",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.287957,
+          "lng": 127.062171,
+          "name": "광교힐스테이트레이크 상가",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "나루터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "신대호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.285874,
+          "lng": 127.059487,
+          "name": "수원컨벤션센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.286582,
+          "lng": 127.055974,
+          "name": "롯데아울렛 광교점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.273953,
+          "lng": 127.060605,
+          "name": "앨리웨이광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "어번레비",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.287039,
+          "lng": 127.057709,
+          "name": "엘포트몰",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "자작나무쉼터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "원천호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "재미난밭",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "전망대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "정다운",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.279254,
+          "lng": 127.068223,
+          "name": "(주) 휴세코 광교지점 희망주유소",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.285334,
+          "lng": 127.057268,
+          "name": "갤러리아 광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "행복한들",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.2751,
+          "lng": 127.06378,
+          "name": "관리사무소",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.272227,
+          "lng": 127.066932,
+          "name": "영덕레스피아",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 20,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "orobF_tpfWiArDvF|EApEcDbJyEfAaGFcG|A_OHgLmA",
+    "start_point": {
+      "lat": 37.276717,
+      "lng": 127.066398
+    }
+  },
+  {
+    "id": "course-1-03",
+    "name": "광교호수공원 반바퀴 코스 (서측)",
+    "dong": "상현1동",
+    "distance_km": 1.5,
+    "duration_min": 22,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.280934,
+          "lng": 127.066803,
+          "name": "광교푸른숲도서관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.276295,
+          "lng": 127.060321,
+          "name": "광교에일린의뜰단지내상가",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.287957,
+          "lng": 127.062171,
+          "name": "광교힐스테이트레이크 상가",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "나루터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "신대호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.285874,
+          "lng": 127.059487,
+          "name": "수원컨벤션센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.286582,
+          "lng": 127.055974,
+          "name": "롯데아울렛 광교점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "어번레비",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.287039,
+          "lng": 127.057709,
+          "name": "엘포트몰",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "자작나무쉼터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "원천호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "재미난밭",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "전망대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "정다운",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.279254,
+          "lng": 127.068223,
+          "name": "(주) 휴세코 광교지점 희망주유소",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.285334,
+          "lng": 127.057268,
+          "name": "갤러리아 광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "행복한들",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.2751,
+          "lng": 127.06378,
+          "name": "관리사무소",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 18,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "euobF{rpfWaDhCsJ`@o@dC_MKoFpGsNgBgC`DPbElHtE",
+    "start_point": {
+      "lat": 37.277153,
+      "lng": 127.066222
+    }
+  },
+  {
+    "id": "course-1-04",
+    "name": "신대저수지 둘레길",
+    "dong": "풍덕천2동",
+    "distance_km": 3.6,
+    "duration_min": 54,
+    "is_loop": true,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.280934,
+          "lng": 127.066803,
+          "name": "광교푸른숲도서관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.292241,
+          "lng": 127.070123,
+          "name": "광교2동행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.294836,
+          "lng": 127.077385,
+          "name": "상현레스피아",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 3,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "ecrbF{jqfWnCOk@~ClDrDn@cFlDcCtHcH~D|EfHqE}@wMmIkLePsEsUgEiF]yCrDlCzD|FnB|EpA|AhDbE~AfCnD}BxLyCrE",
+    "start_point": {
+      "lat": 37.289629,
+      "lng": 127.070057
+    }
+  },
+  {
+    "id": "course-1-05",
+    "name": "성복천 수변길",
+    "dong": "죽전1동",
+    "distance_km": 0.9,
+    "duration_min": 14,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.320544,
+          "lng": 127.095413,
+          "name": "평생학습관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.321829,
+          "lng": 127.102347,
+          "name": "성복천 풍덕고가밑 삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 B구역",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 A구역",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.323407,
+          "lng": 127.110589,
+          "name": "탄천 엑스파크공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32028,
+          "lng": 127.094692,
+          "name": "수지도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.324884,
+          "lng": 127.107388,
+          "name": "죽전역",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "포은아트홀",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326121,
+          "lng": 127.110858,
+          "name": "탄천 죽전삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.321243,
+          "lng": 127.096831,
+          "name": "수지우체국",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "수지레스피아배드민턴장",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322701,
+          "lng": 127.096417,
+          "name": "수지농협",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325325,
+          "lng": 127.110004,
+          "name": "(주)이마트 죽전점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320053,
+          "lng": 127.110381,
+          "name": "죽전누리에들B동 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청 야외화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "아르피아스포츠센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32519,
+          "lng": 127.101957,
+          "name": "수지지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.323102,
+          "lng": 127.094868,
+          "name": "수지로얄스포츠센타 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325003,
+          "lng": 127.108109,
+          "name": "신세계백화점 경기점",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "수지119안전센터",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "제2현장지휘단",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325909,
+          "lng": 127.106739,
+          "name": "죽전2동 주민센터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320147,
+          "lng": 127.098078,
+          "name": "훼미리빌딩",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구보건소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 26,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "yfxbFcyvfW}BmC}BiTyFsME_R",
+    "start_point": {
+      "lat": 37.320932,
+      "lng": 127.097938
+    }
+  },
+  {
+    "id": "course-2-01",
+    "name": "신봉동 산책로",
+    "dong": "신봉동",
+    "distance_km": 1.2,
+    "duration_min": 18,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.327795,
+          "lng": 127.068634,
+          "name": "동광프라자",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 1,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "{~ybFa~pfWi@gBeD`CkP{[sPl[",
+    "start_point": {
+      "lat": 37.329901,
+      "lng": 127.06801
+    }
+  },
+  {
+    "id": "course-2-02",
+    "name": "광교산 자락길 (초입)",
+    "dong": "상현1동",
+    "distance_km": 5.5,
+    "duration_min": 82,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.320665,
+          "lng": 127.08364,
+          "name": "신봉동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319763,
+          "lng": 127.083329,
+          "name": "이마트 수지점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.319457,
+          "lng": 127.088793,
+          "name": "풍덕천2동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 3,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "y{xbFcvtfWzFhCg`AdrAww@tfCaNxiB",
+    "start_point": {
+      "lat": 37.324294,
+      "lng": 127.087216
+    }
+  },
+  {
+    "id": "course-2-03",
+    "name": "탄천 수변길 (죽전 구간)",
+    "dong": "죽전2동",
+    "distance_km": 2.6,
+    "duration_min": 39,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.333307,
+          "lng": 127.111532,
+          "name": "중앙프라자",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.321829,
+          "lng": 127.102347,
+          "name": "성복천 풍덕고가밑 삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.328469,
+          "lng": 127.115011,
+          "name": "선진포리스트(나동)",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328469,
+          "lng": 127.115011,
+          "name": "선진포리스트(가동)",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320197,
+          "lng": 127.1131,
+          "name": "보정동 행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.323407,
+          "lng": 127.110589,
+          "name": "탄천 엑스파크공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.33041,
+          "lng": 127.118647,
+          "name": "죽전도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.324884,
+          "lng": 127.107388,
+          "name": "죽전역",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "포은아트홀",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326121,
+          "lng": 127.110858,
+          "name": "탄천 죽전삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.328611,
+          "lng": 127.114299,
+          "name": "금강프라자 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.331982,
+          "lng": 127.128234,
+          "name": "용인죽전1동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "수지레스피아배드민턴장",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328791,
+          "lng": 127.10862,
+          "name": "에프앤에프 콜렉티드",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325325,
+          "lng": 127.110004,
+          "name": "(주)이마트 죽전점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320053,
+          "lng": 127.110381,
+          "name": "죽전누리에들B동 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "아르피아스포츠센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32519,
+          "lng": 127.101957,
+          "name": "수지지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325003,
+          "lng": 127.108109,
+          "name": "신세계백화점 경기점",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.33108,
+          "lng": 127.113959,
+          "name": "죽전1동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325909,
+          "lng": 127.106739,
+          "name": "죽전2동 주민센터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.329884,
+          "lng": 127.109359,
+          "name": "예스병원용인분당점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.331874,
+          "lng": 127.119712,
+          "name": "현대프라자",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.331249,
+          "lng": 127.127549,
+          "name": "신주프라자 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 24,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "qgzbFou|fWpBdB?tu@uCza@lV`KbTF`CzVqDJ",
+    "start_point": {
+      "lat": 37.331286,
+      "lng": 127.128076
+    }
+  },
+  {
+    "id": "course-2-04",
+    "name": "동천 숲 산책로",
+    "dong": "동천동",
+    "distance_km": 0.6,
+    "duration_min": 9,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [],
+      "park_entrances": []
+    },
+    "toilet_count": 0,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "qm{bFidsfWeEcQlBcN}BfA",
+    "start_point": {
+      "lat": 37.337366,
+      "lng": 127.07925
+    }
+  },
+  {
+    "id": "course-3-01",
+    "name": "죽전역-수지구청 산책로",
+    "dong": "죽전1동",
+    "distance_km": 1.3,
+    "duration_min": 20,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.320544,
+          "lng": 127.095413,
+          "name": "평생학습관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.321829,
+          "lng": 127.102347,
+          "name": "성복천 풍덕고가밑 삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 B구역",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 A구역",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.323407,
+          "lng": 127.110589,
+          "name": "탄천 엑스파크공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32028,
+          "lng": 127.094692,
+          "name": "수지도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.324884,
+          "lng": 127.107388,
+          "name": "죽전역",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "포은아트홀",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326121,
+          "lng": 127.110858,
+          "name": "탄천 죽전삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.321243,
+          "lng": 127.096831,
+          "name": "수지우체국",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "수지레스피아배드민턴장",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322701,
+          "lng": 127.096417,
+          "name": "수지농협",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328791,
+          "lng": 127.10862,
+          "name": "에프앤에프 콜렉티드",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325325,
+          "lng": 127.110004,
+          "name": "(주)이마트 죽전점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청 야외화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "아르피아스포츠센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32519,
+          "lng": 127.101957,
+          "name": "수지지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.323102,
+          "lng": 127.094868,
+          "name": "수지로얄스포츠센타 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325003,
+          "lng": 127.108109,
+          "name": "신세계백화점 경기점",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "수지119안전센터",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "제2현장지휘단",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325909,
+          "lng": 127.106739,
+          "name": "죽전2동 주민센터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320147,
+          "lng": 127.098078,
+          "name": "훼미리빌딩",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구보건소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326333,
+          "lng": 127.09616,
+          "name": "중앙어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 27,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "g}xbFwsxfWjAzAfAI[dLbQbk@??sK~K",
+    "start_point": {
+      "lat": 37.324517,
+      "lng": 127.107321
+    }
+  },
+  {
+    "id": "course-3-02",
+    "name": "수지구청-수지생태공원 산책로",
+    "dong": "풍덕천1동",
+    "distance_km": 1.1,
+    "duration_min": 16,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.32797,
+          "lng": 127.095012,
+          "name": "풍덕천1동 행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320544,
+          "lng": 127.095413,
+          "name": "평생학습관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 B구역",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 A구역",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32028,
+          "lng": 127.094692,
+          "name": "수지도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.321243,
+          "lng": 127.096831,
+          "name": "수지우체국",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322701,
+          "lng": 127.096417,
+          "name": "수지농협",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320665,
+          "lng": 127.08364,
+          "name": "신봉동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청 야외화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.323102,
+          "lng": 127.094868,
+          "name": "수지로얄스포츠센타 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319763,
+          "lng": 127.083329,
+          "name": "이마트 수지점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.319457,
+          "lng": 127.088793,
+          "name": "풍덕천2동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320147,
+          "lng": 127.098078,
+          "name": "훼미리빌딩",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구보건소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326333,
+          "lng": 127.09616,
+          "name": "중앙어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.327025,
+          "lng": 127.092849,
+          "name": "도장골어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 18,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "gqxbFoevfWbCdFuSvQ??xL~UyEtC",
+    "start_point": {
+      "lat": 37.3226,
+      "lng": 127.094804
+    }
+  },
+  {
+    "id": "course-3-03",
+    "name": "죽전 전내천 산책로",
+    "dong": "죽전2동",
+    "distance_km": 1.0,
+    "duration_min": 15,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.331982,
+          "lng": 127.128234,
+          "name": "용인죽전1동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325459,
+          "lng": 127.126482,
+          "name": "야외음악당",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.331249,
+          "lng": 127.127549,
+          "name": "신주프라자 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 3,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "qgzbFou|fW|IbApI~MjGvAzLfBnC|G",
+    "start_point": {
+      "lat": 37.331286,
+      "lng": 127.128076
+    }
+  },
+  {
+    "id": "course-3-04",
+    "name": "죽전 대지천 산책로",
+    "dong": "죽전2동",
+    "distance_km": 1.4,
+    "duration_min": 21,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.333307,
+          "lng": 127.111532,
+          "name": "중앙프라자",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328469,
+          "lng": 127.115011,
+          "name": "선진포리스트(나동)",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328469,
+          "lng": 127.115011,
+          "name": "선진포리스트(가동)",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.33041,
+          "lng": 127.118647,
+          "name": "죽전도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328611,
+          "lng": 127.114299,
+          "name": "금강프라자 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.331982,
+          "lng": 127.128234,
+          "name": "용인죽전1동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.33108,
+          "lng": 127.113959,
+          "name": "죽전1동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.329884,
+          "lng": 127.109359,
+          "name": "예스병원용인분당점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.331874,
+          "lng": 127.119712,
+          "name": "현대프라자",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.331249,
+          "lng": 127.127549,
+          "name": "신주프라자 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 10,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "ufzbFms|fW`A@aA`GhAvJm@lO~@tL??y@dHM`HsCdBRvP",
+    "start_point": {
+      "lat": 37.331154,
+      "lng": 127.127749
+    }
+  },
+  {
+    "id": "course-3-05",
+    "name": "수지 신촌천 산책로",
+    "dong": "풍덕천1동",
+    "distance_km": 0.5,
+    "duration_min": 8,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.320544,
+          "lng": 127.095413,
+          "name": "평생학습관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 B구역",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 A구역",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32028,
+          "lng": 127.094692,
+          "name": "수지도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.321243,
+          "lng": 127.096831,
+          "name": "수지우체국",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322701,
+          "lng": 127.096417,
+          "name": "수지농협",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청 야외화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.323102,
+          "lng": 127.094868,
+          "name": "수지로얄스포츠센타 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319457,
+          "lng": 127.088793,
+          "name": "풍덕천2동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320147,
+          "lng": 127.098078,
+          "name": "훼미리빌딩",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구보건소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 13,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "ebxbFscvfWbDTlCnJuDzP",
+    "start_point": {
+      "lat": 37.320187,
+      "lng": 127.094502
+    }
+  },
+  {
+    "id": "course-3-06",
+    "name": "동천 자연길",
+    "dong": "동천동",
+    "distance_km": 1.4,
+    "duration_min": 21,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.338588,
+          "lng": 127.092471,
+          "name": "용인동천동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 1,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "kn{bF_dsfWeEePbFc[]oBxKC?iPoCkDVqA",
+    "start_point": {
+      "lat": 37.3375,
+      "lng": 127.079201
+    }
+  },
+  {
+    "id": "course-3-07",
+    "name": "죽전 폭포공원 산책로",
+    "dong": "죽전1동",
+    "distance_km": 1.2,
+    "duration_min": 18,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.319458,
+          "lng": 127.116005,
+          "name": "용인보정동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325459,
+          "lng": 127.126482,
+          "name": "야외음악당",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319521,
+          "lng": 127.115824,
+          "name": "보정지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 3,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "coxbF__{fWmF{QgDoKbVa]]uG",
+    "start_point": {
+      "lat": 37.32226,
+      "lng": 127.119358
+    }
+  },
+  {
+    "id": "course-3-08",
+    "name": "성복-수지구청역 산책로",
+    "dong": "성복동",
+    "distance_km": 2.1,
+    "duration_min": 32,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.32797,
+          "lng": 127.095012,
+          "name": "풍덕천1동 행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320544,
+          "lng": 127.095413,
+          "name": "평생학습관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 B구역",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.31978,
+          "lng": 127.096274,
+          "name": "수지샤르망오피스텔 A구역",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32028,
+          "lng": 127.094692,
+          "name": "수지도서관",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.318653,
+          "lng": 127.082974,
+          "name": "신봉파출소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.312753,
+          "lng": 127.081777,
+          "name": "A화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.321243,
+          "lng": 127.096831,
+          "name": "수지우체국",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322701,
+          "lng": 127.096417,
+          "name": "수지농협",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320665,
+          "lng": 127.08364,
+          "name": "신봉동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.315479,
+          "lng": 127.075295,
+          "name": "예반 아이엔 프라자 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구청 야외화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.323102,
+          "lng": 127.094868,
+          "name": "수지로얄스포츠센타 개방화장실",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319763,
+          "lng": 127.083329,
+          "name": "이마트 수지점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.319457,
+          "lng": 127.088793,
+          "name": "풍덕천2동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320147,
+          "lng": 127.098078,
+          "name": "훼미리빌딩",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지구보건소",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326333,
+          "lng": 127.09616,
+          "name": "중앙어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.327025,
+          "lng": 127.092849,
+          "name": "도장골어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.322245,
+          "lng": 127.097401,
+          "name": "수지복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 21,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "{zvbFyjsfWwq@_`@eSw^tSwQwA_D",
+    "start_point": {
+      "lat": 37.313901,
+      "lng": 127.080292
+    }
+  },
+  {
+    "id": "course-3-09",
+    "name": "광교산 법륜사 산책로",
+    "dong": "신봉동",
+    "distance_km": 2.0,
+    "duration_min": 30,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [],
+      "park_entrances": []
+    },
+    "toilet_count": 0,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "uzzbFqlmfWaVhC??am@`|A",
+    "start_point": {
+      "lat": 37.334354,
+      "lng": 127.049846
+    }
+  },
+  {
+    "id": "course-3-10",
+    "name": "성복동 근린 산책로",
+    "dong": "성복동",
+    "distance_km": 1.3,
+    "duration_min": 20,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.312753,
+          "lng": 127.081777,
+          "name": "A화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.315479,
+          "lng": 127.075295,
+          "name": "예반 아이엔 프라자 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.316484,
+          "lng": 127.069003,
+          "name": "성복동 행정복지센터",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 3,
+    "vegetation": {
+      "tags": [],
+      "description": "",
+      "species": []
+    },
+    "slope_grade": 3.0,
+    "utci_score": 5.0,
+    "shade_ratio": 0.5,
+    "biotope_grade": 3,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "okwbFkdqfWk@YpImd@o@kO|EcSxErBx@}A",
+    "start_point": {
+      "lat": 37.316559,
+      "lng": 127.069025
+    }
+  }
+]
