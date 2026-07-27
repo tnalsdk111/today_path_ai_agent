@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import WeatherBox from "@/components/WeatherBox";
 import DongSelector from "@/components/DongSelector";
 import FilterPanel from "@/components/FilterPanel";
 import CourseCard from "@/components/CourseCard";
+import BottomNav from "@/components/BottomNav";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterCourses } from "@/lib/filterCourses";
 import { scoreCourse, buildWeights } from "@/lib/scoreCourse";
@@ -15,12 +15,6 @@ import { MOCK_WEATHER } from "@/lib/mockWeather";
 
 const courses = coursesData as Course[];
 
-const NAV_TABS = [
-  { icon: "map", label: "추천", href: "/", active: true },
-  { icon: "explore", label: "탐색", href: "/discovery", active: false },
-  { icon: "route", label: "내 경로", href: "#", active: false },
-  { icon: "person", label: "프로필", href: "#", active: false },
-];
 
 export default function HomePage() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -52,14 +46,25 @@ export default function HomePage() {
       });
   }, []);
 
-  const top3: Course[] = (() => {
+  const rankedCourses: Course[] = (() => {
     if (!dong || !weatherData) return [];
 
     const safeCourses = weatherData.weather.is_raining
       ? courses.filter((c) => !c.flood_risk)
       : courses;
 
-    const filterOptions = { dong, duration: duration ?? undefined, themes, nightSafe };
+    const hasFilter =
+      duration !== null ||
+      themes.length > 0 ||
+      nightSafe ||
+      flatPriority ||
+      coolPriority ||
+      toiletPriority ||
+      naturePriority;
+
+    const filterOptions = hasFilter
+      ? { dong, duration: duration ?? undefined, themes, nightSafe }
+      : { dong };
     const filtered = filterCourses(safeCourses, filterOptions);
 
     const weights = buildWeights({
@@ -71,10 +76,9 @@ export default function HomePage() {
     });
 
     return filtered
-      .map((c) => ({ course: c, score: scoreCourse(c, weights) }))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 3)
-      .map(({ course }) => course);
+      .map((c) => ({ course: c, score: scoreCourse(c, weights) })) // 각 코스에 대한 점수 계산
+      .sort((a, b) => b.score - a.score) // 점수 순으로 정렬
+      .map(({ course }) => course); // 코스 데이터만 반환
   })();
 
   return (
@@ -125,15 +129,15 @@ export default function HomePage() {
           {dong && weatherData && (
             <section className="flex flex-col gap-md">
               <h2 className="font-h3 text-h3 text-on-surface">
-                {top3.length}개의 코스를 찾았어요
+                {rankedCourses.length}개의 코스를 찾았어요
               </h2>
-              {top3.length === 0 ? (
+              {rankedCourses.length === 0 ? (
                 <p className="font-body-md text-body-md text-on-surface-variant text-center py-lg">
                   조건에 맞는 코스가 없어요. 필터를 조정해보세요.
                 </p>
               ) : (
                 <div className="flex flex-col gap-md">
-                  {top3.map((course) => (
+                  {rankedCourses.map((course) => (
                     <CourseCard
                       key={course.id}
                       course={course}
@@ -153,39 +157,7 @@ export default function HomePage() {
           )}
         </main>
 
-        {/* BottomNavBar */}
-        <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface shadow-[0_-2px_8px_rgba(0,0,0,0.06)] flex justify-around items-center px-4 pb-4 pt-2 font-label-sm text-label-sm max-w-[390px] mx-auto right-0">
-          {NAV_TABS.map(({ icon, label, href, active }) =>
-            href === "#" ? (
-              <button
-                key={label}
-                type="button"
-                className="flex flex-col items-center gap-0.5 text-secondary p-2"
-              >
-                <span className="material-symbols-outlined text-[24px]">{icon}</span>
-                {label}
-              </button>
-            ) : (
-              <Link
-                key={label}
-                href={href}
-                className={
-                  active
-                    ? "flex flex-col items-center gap-0.5 bg-secondary-container text-primary rounded-full px-4 py-1"
-                    : "flex flex-col items-center gap-0.5 text-secondary p-2"
-                }
-              >
-                <span
-                  className="material-symbols-outlined text-[24px]"
-                  style={active ? { fontVariationSettings: "'FILL' 1" } : undefined}
-                >
-                  {icon}
-                </span>
-                {label}
-              </Link>
-            ),
-          )}
-        </nav>
+        <BottomNav />
       </div>
     </div>
   );

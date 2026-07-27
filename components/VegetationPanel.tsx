@@ -1,4 +1,4 @@
-import { Course, PollenLevel, PollenTag, VegetationSpecies, WeatherData } from "@/types/index";
+import { Course, WeatherData } from "@/types/index";
 import { hasPollenWarning } from "@/lib/pollenWarning";
 
 interface VegetationPanelProps {
@@ -6,39 +6,18 @@ interface VegetationPanelProps {
   pollen: WeatherData["pollen"];
 }
 
-const SPECIES_TO_TAG: Record<string, PollenTag> = {
-  소나무: "pine",
-  자작나무: "birch",
-  참나무: "oak",
+const TAG_CONFIG: Record<string, { label: string; pollen: boolean }> = {
+  pine:   { label: "소나무류",        pollen: true  },
+  oak:    { label: "참나무류",        pollen: true  },
+  grass:  { label: "아까시·버드나무", pollen: true  },
+  birch:  { label: "자작나무",        pollen: true  },
+  meta:   { label: "메타세콰이어",    pollen: false },
+  bamboo: { label: "대나무",          pollen: false },
 };
-
-const POLLEN_TAG_TO_KEY: Record<PollenTag, keyof WeatherData["pollen"]> = {
-  pine: "pine",
-  birch: "birch",
-  oak: "grass",
-  grass: "grass",
-};
-
-const WARNING_LEVELS: PollenLevel[] = ["보통", "높음"];
-
-function isPollenWarningSpecies(
-  species: VegetationSpecies,
-  pollen: WeatherData["pollen"]
-): boolean {
-  if (!species.note.includes("꽃가루")) return false;
-  const tag = SPECIES_TO_TAG[species.name] ?? "grass";
-  const pollenKey = POLLEN_TAG_TO_KEY[tag];
-  return WARNING_LEVELS.includes(pollen[pollenKey]);
-}
-
-function speciesIcon(name: string): string {
-  if (["갈대", "풀류"].some((k) => name.includes(k))) return "grass";
-  if (["소나무", "참나무", "자작나무", "나무"].some((k) => name.includes(k))) return "park";
-  return "eco";
-}
 
 export default function VegetationPanel({ course, pollen }: VegetationPanelProps) {
   const showWarningBanner = hasPollenWarning(course, pollen);
+  const tags = course.vegetation.tags.filter((t) => t in TAG_CONFIG);
 
   return (
     <div
@@ -71,48 +50,33 @@ export default function VegetationPanel({ course, pollen }: VegetationPanelProps
         </div>
       )}
 
-      {/* 수종 목록 */}
-      <div className="flex flex-col gap-md mb-md">
-        {course.vegetation.species.map((species, idx) => {
-          const isWarning = isPollenWarningSpecies(species, pollen);
-          return (
-            <div
-              key={species.name}
-              className={`flex items-center gap-3 ${idx !== 0 ? "border-t border-surface-variant pt-md" : ""}`}
-            >
-              {/* 아이콘 영역 */}
-              <div className="w-[44px] h-[44px] rounded-full bg-surface-container flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-primary-container text-[24px]">
-                  {speciesIcon(species.name)}
-                </span>
-              </div>
-
-              {/* 텍스트 영역 */}
-              <div className="flex flex-col">
-                <span className="font-body-md text-body-md font-semibold text-on-surface">
-                  {species.name}
-                </span>
-                {isWarning ? (
-                  <span className="font-label-sm text-label-sm text-[#F57F17] bg-[#FFF8E1] px-2 py-0.5 rounded-full mt-1 w-max">
-                    꽃가루 주의
-                  </span>
-                ) : (
-                  <span className="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full mt-1 w-max">
-                    {species.note}
-                  </span>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* 코스 설명 인용구 */}
-      <div className="bg-surface-container-low rounded-lg p-sm border-l-4 border-primary-container">
-        <p className="font-body-md text-body-md italic text-on-surface-variant">
-          &ldquo;{course.vegetation.description}&rdquo;
+      {/* 수종 태그 칩 */}
+      {tags.length === 0 ? (
+        <p className="font-body-md text-body-md text-on-surface-variant">
+          주요 수종 정보가 없어요
         </p>
-      </div>
+      ) : (
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => {
+            const config = TAG_CONFIG[tag];
+            return config.pollen ? (
+              <span
+                key={tag}
+                className="bg-orange-50 text-orange-700 border border-orange-200 rounded-full px-sm py-1 font-label-sm text-label-sm"
+              >
+                {config.label} 🌼
+              </span>
+            ) : (
+              <span
+                key={tag}
+                className="bg-surface-container text-on-surface-variant rounded-full px-sm py-1 font-label-sm text-label-sm"
+              >
+                {config.label}
+              </span>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

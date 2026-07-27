@@ -10,6 +10,7 @@
     "night_safe": false,
     "has_stream": false,
     "themes": [
+      "lake",
       "park"
     ],
     "facilities": {
@@ -179,224 +180,46 @@
     },
     "toilet_count": 20,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "meta"
+      ],
+      "description": "느티나무, 메타세콰이어, 소나무",
+      "species": [
+        {
+          "name": "느티나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "메타세콰이어",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
+    "slope_grade": 2.15,
+    "utci_score": 6.8,
+    "shade_ratio": 0.3,
+    "biotope_grade": 5,
     "eco_axis": false,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "{sobFospfW]bDvF|EApEcDbJqObB_LvBeXgBeFaF?iGpEs@vK~@nFqG~LJrBqCnHUjE}C",
     "start_point": {
       "lat": 37.276939,
       "lng": 127.06632
-    }
+    },
+    "calories": 171
   },
   {
     "id": "course-1-02",
-    "name": "광교호수공원 반바퀴 코스 (동측)",
-    "dong": "상현1동",
-    "distance_km": 1.5,
-    "duration_min": 22,
-    "is_loop": false,
-    "difficulty": "flat",
-    "night_safe": false,
-    "has_stream": false,
-    "themes": [
-      "park"
-    ],
-    "facilities": {
-      "toilets": [
-        {
-          "lat": 37.280934,
-          "lng": 127.066803,
-          "name": "광교푸른숲도서관",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.276295,
-          "lng": 127.060321,
-          "name": "광교에일린의뜰단지내상가",
-          "accessible": false,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.287957,
-          "lng": 127.062171,
-          "name": "광교힐스테이트레이크 상가",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "나루터",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "신대호수",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.285874,
-          "lng": 127.059487,
-          "name": "수원컨벤션센터",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.286582,
-          "lng": 127.055974,
-          "name": "롯데아울렛 광교점",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.273953,
-          "lng": 127.060605,
-          "name": "앨리웨이광교",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "어번레비",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.287039,
-          "lng": 127.057709,
-          "name": "엘포트몰",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "자작나무쉼터",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "원천호수",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "재미난밭",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "전망대",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "정다운",
-          "accessible": true,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.279254,
-          "lng": 127.068223,
-          "name": "(주) 휴세코 광교지점 희망주유소",
-          "accessible": false,
-          "children": false,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.285334,
-          "lng": 127.057268,
-          "name": "갤러리아 광교",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": true
-        },
-        {
-          "lat": 37.280679,
-          "lng": 127.065992,
-          "name": "행복한들",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.2751,
-          "lng": 127.06378,
-          "name": "관리사무소",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        },
-        {
-          "lat": 37.272227,
-          "lng": 127.066932,
-          "name": "영덕레스피아",
-          "accessible": true,
-          "children": true,
-          "emergency_bell": false
-        }
-      ],
-      "park_entrances": []
-    },
-    "toilet_count": 20,
-    "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
-    },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
-    "flood_risk": false,
-    "shelter_nearby": false,
-    "park_grade": 3,
-    "polyline": "orobF_tpfWiArDvF|EApEcDbJyEfAaGFcG|A_OHgLmA",
-    "start_point": {
-      "lat": 37.276717,
-      "lng": 127.066398
-    }
-  },
-  {
-    "id": "course-1-03",
     "name": "광교호수공원 반바퀴 코스 (서측)",
     "dong": "상현1동",
     "distance_km": 1.5,
@@ -406,6 +229,226 @@
     "night_safe": false,
     "has_stream": false,
     "themes": [
+      "lake",
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.280934,
+          "lng": 127.066803,
+          "name": "광교푸른숲도서관",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.276295,
+          "lng": 127.060321,
+          "name": "광교에일린의뜰단지내상가",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.287957,
+          "lng": 127.062171,
+          "name": "광교힐스테이트레이크 상가",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "나루터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "신대호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.285874,
+          "lng": 127.059487,
+          "name": "수원컨벤션센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.286582,
+          "lng": 127.055974,
+          "name": "롯데아울렛 광교점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.273953,
+          "lng": 127.060605,
+          "name": "앨리웨이광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "어번레비",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.287039,
+          "lng": 127.057709,
+          "name": "엘포트몰",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "자작나무쉼터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "원천호수",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "재미난밭",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "전망대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "정다운",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.279254,
+          "lng": 127.068223,
+          "name": "(주) 휴세코 광교지점 희망주유소",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.285334,
+          "lng": 127.057268,
+          "name": "갤러리아 광교",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.280679,
+          "lng": 127.065992,
+          "name": "행복한들",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.2751,
+          "lng": 127.06378,
+          "name": "관리사무소",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.272227,
+          "lng": 127.066932,
+          "name": "영덕레스피아",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": []
+    },
+    "toilet_count": 20,
+    "vegetation": {
+      "tags": [
+        "pine",
+        "meta"
+      ],
+      "description": "느티나무, 메타세콰이어, 소나무",
+      "species": [
+        {
+          "name": "느티나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "메타세콰이어",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 1.11,
+    "utci_score": 7.2,
+    "shade_ratio": 0.133,
+    "biotope_grade": 5,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": true,
+    "park_grade": 3,
+    "polyline": "orobF_tpfWiArDvF|EApEcDbJyEfAaGFcG|A_OHgLmA",
+    "start_point": {
+      "lat": 37.276717,
+      "lng": 127.066398
+    },
+    "calories": 83
+  },
+  {
+    "id": "course-1-03",
+    "name": "광교호수공원 반바퀴 코스 (동측)",
+    "dong": "상현1동",
+    "distance_km": 1.5,
+    "duration_min": 22,
+    "is_loop": false,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "lake",
       "park"
     ],
     "facilities": {
@@ -559,23 +602,43 @@
     },
     "toilet_count": 18,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "meta"
+      ],
+      "description": "느티나무, 메타세콰이어, 소나무",
+      "species": [
+        {
+          "name": "느티나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "메타세콰이어",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
+    "slope_grade": 2.91,
+    "utci_score": 6.1,
+    "shade_ratio": 0.533,
+    "biotope_grade": 5,
     "eco_axis": false,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "euobF{rpfWaDhCsJ`@o@dC_MKoFpGsNgBgC`DPbElHtE",
     "start_point": {
       "lat": 37.277153,
       "lng": 127.066222
-    }
+    },
+    "calories": 83
   },
   {
     "id": "course-1-04",
@@ -586,9 +649,11 @@
     "is_loop": true,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "lake",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -617,27 +682,55 @@
           "emergency_bell": false
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.2811703,
+          "lng": 127.0741687,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 3,
     "vegetation": {
       "tags": [],
-      "description": "",
-      "species": []
+      "description": "시가지, 하천, 하천림, 인공초지",
+      "species": [
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 3.8,
+    "utci_score": 5.2,
+    "shade_ratio": 0.704,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "ecrbF{jqfWnCOk@~ClDrDn@cFlDcCtHcH~D|EfHqE}@wMmIkLePsEsUgEiF]yCrDlCzD|FnB|EpA|AhDbE~AfCnD}BxLyCrE",
     "start_point": {
       "lat": 37.289629,
       "lng": 127.070057
-    }
+    },
+    "calories": 293
   },
   {
     "id": "course-1-05",
@@ -648,9 +741,10 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -863,27 +957,110 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3232286,
+          "lng": 127.1108103,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3230581,
+          "lng": 127.1101081,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3226949,
+          "lng": 127.1097153,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3233973,
+          "lng": 127.1104771,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 26,
     "vegetation": {
       "tags": [],
-      "description": "",
-      "species": []
+      "description": "인공초지, 밭, 시가지, 도로, 식생이 없는 철로, 가로수가 식재된 도로, 하천, 자연초지, 강기슭, 하천림, 가로수가 식재되지 않은 도로, 인공나지",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "식생이 없는 철로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.41,
+    "utci_score": 6.4,
+    "shade_ratio": 0.368,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "yfxbFcyvfW}BmC}BiTyFsME_R",
     "start_point": {
       "lat": 37.320932,
       "lng": 127.097938
-    }
+    },
+    "calories": 53
   },
   {
     "id": "course-2-01",
@@ -892,10 +1069,11 @@
     "distance_km": 1.2,
     "duration_min": 18,
     "is_loop": false,
-    "difficulty": "flat",
+    "difficulty": "steep",
     "night_safe": false,
     "has_stream": false,
     "themes": [
+      "forest",
       "park"
     ],
     "facilities": {
@@ -913,15 +1091,115 @@
     },
     "toilet_count": 1,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak",
+        "grass"
+      ],
+      "description": "인공초지, 시가지, 도로, 습지자생초지, 신갈나무-참나무류군락, 상수리나무군락, 버드나무군락, 상수리나무-리기다소나무군락, 굴참나무-밤나무군락, 상수리나무-밤나무군락, 리기다소나무식재림, 아까시나무-밤나무식재림, 졸참나무군락, 굴참나무-참나무류군락, 참나무류-리기다소나무군락, 참나무류-밤나무군락, 상수리나무-굴참나무군락, 굴참나무-아까시나무군락, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "습지자생초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "버드나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-굴참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 7.12,
+    "utci_score": 3.1,
+    "shade_ratio": 0.958,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
     "shelter_nearby": false,
     "park_grade": 3,
@@ -929,7 +1207,8 @@
     "start_point": {
       "lat": 37.329901,
       "lng": 127.06801
-    }
+    },
+    "calories": 137
   },
   {
     "id": "course-2-02",
@@ -938,11 +1217,11 @@
     "distance_km": 5.5,
     "duration_min": 82,
     "is_loop": false,
-    "difficulty": "flat",
+    "difficulty": "steep",
     "night_safe": false,
     "has_stream": false,
     "themes": [
-      "park"
+      "forest"
     ],
     "facilities": {
       "toilets": [
@@ -971,27 +1250,314 @@
           "emergency_bell": false
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3247939,
+          "lng": 127.0902534,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3244987,
+          "lng": 127.0901245,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3279686,
+          "lng": 127.0836284,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3271924,
+          "lng": 127.0849226,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3271,
+          "lng": 127.0847187,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.329296,
+          "lng": 127.082856,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3291174,
+          "lng": 127.0827352,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3286281,
+          "lng": 127.0840632,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3286669,
+          "lng": 127.0827156,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3292113,
+          "lng": 127.0833393,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3212675,
+          "lng": 127.0847822,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232038,
+          "lng": 127.0866894,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3250568,
+          "lng": 127.0838264,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3252871,
+          "lng": 127.0849055,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3251202,
+          "lng": 127.0858847,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 3,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak",
+        "grass"
+      ],
+      "description": "습지자생초지, 호소, 인공초지, 시가지, 인공나지, 자연초지, 암벽·바위, 밭, 도로, 신갈나무-참나무류군락, 굴참나무-상수리나무군락, 상수리나무군락, 상수리나무-굴참나무군락, 굴참나무-참나무류군락, 상수리나무-리기다소나무군락, 버드나무군락, 굴참나무-리기다소나무군락, 참나무류-밤나무군락, 상수리나무-아까시나무군락, 굴참나무-밤나무군락, 상수리나무-밤나무군락, 리기다소나무식재림, 아까시나무-밤나무식재림, 아까시나무식재림, 굴참나무군락, 졸참나무군락, 상수리나무-참나무류군락, 참나무류-리기다소나무군락, 신갈나무-리기다소나무군락, 참나무류-소나무군락, 참나무류-아까시나무군락, 신갈나무-아까시나무군락, 신갈나무-밤나무군락, 소나무군락, 일본잎갈나무식재림, 일본잎갈나무-밤나무식재림, 밤나무식재림, 리기다소나무-밤나무식재림, 시설경작지, 굴참나무-아까시나무군락, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "습지자생초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "암벽·바위",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-굴참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "버드나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "일본잎갈나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "일본잎갈나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시설경작지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 9.44,
+    "utci_score": 3.4,
+    "shade_ratio": 0.91,
+    "biotope_grade": 2,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "y{xbFcvtfWzFhCg`AdrAww@tfCaNxiB",
     "start_point": {
       "lat": 37.324294,
       "lng": 127.087216
-    }
+    },
+    "calories": 622
   },
   {
     "id": "course-2-03",
@@ -1002,9 +1568,11 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -1201,27 +1769,248 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3323605,
+          "lng": 127.1236721,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3328107,
+          "lng": 127.1236241,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3294855,
+          "lng": 127.1280573,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3293944,
+          "lng": 127.1281942,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3300161,
+          "lng": 127.128129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3295728,
+          "lng": 127.1294269,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3297802,
+          "lng": 127.1188734,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3301644,
+          "lng": 127.1204685,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3302108,
+          "lng": 127.1209521,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330061,
+          "lng": 127.1192937,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3300147,
+          "lng": 127.1190108,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3308887,
+          "lng": 127.1184485,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330625,
+          "lng": 127.1182833,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285009,
+          "lng": 127.1176737,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330858,
+          "lng": 127.1135442,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3308597,
+          "lng": 127.1141269,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3303279,
+          "lng": 127.114078,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3294093,
+          "lng": 127.1133242,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3292381,
+          "lng": 127.112917,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3293694,
+          "lng": 127.1127847,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3303442,
+          "lng": 127.1130502,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3302813,
+          "lng": 127.113009,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3306157,
+          "lng": 127.1132263,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3236863,
+          "lng": 127.1110943,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232789,
+          "lng": 127.1110366,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3222738,
+          "lng": 127.1110597,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232286,
+          "lng": 127.1108103,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3230581,
+          "lng": 127.1101081,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3226949,
+          "lng": 127.1097153,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3223667,
+          "lng": 127.1107223,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3233973,
+          "lng": 127.1104771,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 24,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "oak",
+        "grass"
+      ],
+      "description": "인공초지, 시가지, 도로, 식생이 없는 철로, 인공나지, 참나무류-아까시나무군락, 하천, 하천림, 자연초지, 강기슭, 가로수가 식재되지 않은 도로, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "식생이 없는 철로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.41,
+    "utci_score": 5.8,
+    "shade_ratio": 0.472,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "qgzbFou|fWpBdB?tu@uCza@lV`KbTF`CzVqDJ",
     "start_point": {
       "lat": 37.331286,
       "lng": 127.128076
-    }
+    },
+    "calories": 148
   },
   {
     "id": "course-2-04",
@@ -1232,9 +2021,11 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [],
@@ -1242,15 +2033,104 @@
     },
     "toilet_count": 0,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak"
+      ],
+      "description": "밭, 기타재배지, 인공초지, 시가지, 도로, 인공나지, 상수리나무군락, 참나무류-리기다소나무군락, 굴참나무-리기다소나무군락, 리기다소나무식재림, 하천, 자연초지, 강기슭, 하천림, 가로수가 식재되지 않은 도로, 일본잎갈나무식재림, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "기타재배지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "일본잎갈나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.48,
+    "utci_score": 6.2,
+    "shade_ratio": 0.333,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
     "shelter_nearby": false,
     "park_grade": 3,
@@ -1258,7 +2138,8 @@
     "start_point": {
       "lat": 37.337366,
       "lng": 127.07925
-    }
+    },
+    "calories": 34
   },
   {
     "id": "course-3-01",
@@ -1269,9 +2150,10 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -1492,27 +2374,105 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3196729,
+          "lng": 127.0949344,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3230581,
+          "lng": 127.1101081,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3226949,
+          "lng": 127.1097153,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 27,
     "vegetation": {
       "tags": [],
-      "description": "",
-      "species": []
+      "description": "인공초지, 시가지, 도로, 밭, 식생이 없는 철로, 인공나지, 가로수가 식재된 도로, 하천, 자연초지, 강기슭, 가로수가 식재되지 않은 도로, 하천림",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "식생이 없는 철로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.9,
+    "utci_score": 6.9,
+    "shade_ratio": 0.231,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "g}xbFwsxfWjAzAfAI[dLbQbk@??sK~K",
     "start_point": {
       "lat": 37.324517,
       "lng": 127.107321
-    }
+    },
+    "calories": 76
   },
   {
     "id": "course-3-02",
@@ -1525,6 +2485,8 @@
     "night_safe": false,
     "has_stream": false,
     "themes": [
+      "forest",
+      "lake",
       "park"
     ],
     "facilities": {
@@ -1674,27 +2636,178 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3248867,
+          "lng": 127.0907503,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3247939,
+          "lng": 127.0902534,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.32451,
+          "lng": 127.0911419,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3242983,
+          "lng": 127.0913384,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3238847,
+          "lng": 127.0917221,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232057,
+          "lng": 127.0915642,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3233745,
+          "lng": 127.091129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3244987,
+          "lng": 127.0901245,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3240174,
+          "lng": 127.091599,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3212675,
+          "lng": 127.0847822,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232038,
+          "lng": 127.0866894,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3250568,
+          "lng": 127.0838264,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3252871,
+          "lng": 127.0849055,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3251202,
+          "lng": 127.0858847,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.320286,
+          "lng": 127.0940916,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196811,
+          "lng": 127.0930292,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3195306,
+          "lng": 127.0942685,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196729,
+          "lng": 127.0949344,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 18,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "oak",
+        "grass"
+      ],
+      "description": "호소, 밭, 인공초지, 시가지, 인공나지, 도로, 상수리나무군락, 굴참나무-참나무류군락, 아까시나무-밤나무식재림, 가로수가 식재된 도로, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.68,
+    "utci_score": 5.5,
+    "shade_ratio": 0.565,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "gqxbFoevfWbCdFuSvQ??xL~UyEtC",
     "start_point": {
       "lat": 37.3226,
       "lng": 127.094804
-    }
+    },
+    "calories": 61
   },
   {
     "id": "course-3-03",
@@ -1705,9 +2818,11 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -1736,19 +2851,140 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3294855,
+          "lng": 127.1280573,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3293944,
+          "lng": 127.1281942,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3300161,
+          "lng": 127.128129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3295728,
+          "lng": 127.1294269,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3260389,
+          "lng": 127.1281076,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3250258,
+          "lng": 127.1250517,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3250046,
+          "lng": 127.1258006,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3245539,
+          "lng": 127.1270285,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321333,
+          "lng": 127.1213689,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209883,
+          "lng": 127.1223628,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321046,
+          "lng": 127.1225465,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3224352,
+          "lng": 127.1200009,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 3,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak",
+        "grass"
+      ],
+      "description": "자연초지, 인공초지, 시가지, 도로, 인공나지, 졸참나무-일본잎갈나무군락, 아까시나무식재림, 아까시나무-밤나무식재림, 하천, 가로수가 식재된 도로, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무-일본잎갈나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 2.27,
+    "utci_score": 4.2,
+    "shade_ratio": 0.857,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
     "shelter_nearby": false,
     "park_grade": 3,
@@ -1756,7 +2992,8 @@
     "start_point": {
       "lat": 37.331286,
       "lng": 127.128076
-    }
+    },
+    "calories": 57
   },
   {
     "id": "course-3-04",
@@ -1767,9 +3004,10 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -1854,27 +3092,200 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3323605,
+          "lng": 127.1236721,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3328107,
+          "lng": 127.1236241,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3294855,
+          "lng": 127.1280573,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3293944,
+          "lng": 127.1281942,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3300161,
+          "lng": 127.128129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3295728,
+          "lng": 127.1294269,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3297802,
+          "lng": 127.1188734,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3301644,
+          "lng": 127.1204685,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3302108,
+          "lng": 127.1209521,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330061,
+          "lng": 127.1192937,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3300147,
+          "lng": 127.1190108,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3308887,
+          "lng": 127.1184485,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330625,
+          "lng": 127.1182833,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285009,
+          "lng": 127.1176737,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.330858,
+          "lng": 127.1135442,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3308597,
+          "lng": 127.1141269,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3303279,
+          "lng": 127.114078,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3294093,
+          "lng": 127.1133242,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3292381,
+          "lng": 127.112917,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3293694,
+          "lng": 127.1127847,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3303442,
+          "lng": 127.1130502,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3302813,
+          "lng": 127.113009,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3306157,
+          "lng": 127.1132263,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 10,
     "vegetation": {
       "tags": [],
-      "description": "",
-      "species": []
+      "description": "인공초지, 시가지, 도로, 인공나지, 하천, 자연초지, 하천림, 밭, 가로수가 식재되지 않은 도로, 가로수가 식재된 도로, 강기슭",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
+    "slope_grade": 2.37,
+    "utci_score": 5.9,
     "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "ufzbFms|fW`A@aA`GhAvJm@lO~@tL??y@dHM`HsCdBRvP",
     "start_point": {
       "lat": 37.331154,
       "lng": 127.127749
-    }
+    },
+    "calories": 80
   },
   {
     "id": "course-3-05",
@@ -1885,9 +3296,11 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "lake",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -1996,27 +3409,105 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.320286,
+          "lng": 127.0940916,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196811,
+          "lng": 127.0930292,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3191565,
+          "lng": 127.0934937,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3192287,
+          "lng": 127.0936166,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3195306,
+          "lng": 127.0942685,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196729,
+          "lng": 127.0949344,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 13,
     "vegetation": {
       "tags": [],
-      "description": "",
-      "species": []
+      "description": "인공초지, 시가지, 호소, 도로, 하천, 강기슭, 하천림, 가로수가 식재된 도로, 자연초지",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.08,
+    "utci_score": 6.0,
+    "shade_ratio": 0.455,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "ebxbFscvfWbDTlCnJuDzP",
     "start_point": {
       "lat": 37.320187,
       "lng": 127.094502
-    }
+    },
+    "calories": 30
   },
   {
     "id": "course-3-06",
@@ -2027,9 +3518,12 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "lake",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -2042,19 +3536,144 @@
           "emergency_bell": false
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3377782,
+          "lng": 127.089292,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3349077,
+          "lng": 127.0868376,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3332292,
+          "lng": 127.086979,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3351005,
+          "lng": 127.0859567,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3341131,
+          "lng": 127.0856699,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3332543,
+          "lng": 127.0865479,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3349572,
+          "lng": 127.0925008,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 1,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak"
+      ],
+      "description": "강기슭, 밭, 기타재배지, 인공초지, 시가지, 도로, 인공나지, 참나무류-리기다소나무군락, 굴참나무-리기다소나무군락, 리기다소나무식재림, 호소, 하천, 자연초지, 하천림, 가로수가 식재되지 않은 도로, 일본잎갈나무식재림, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "기타재배지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "일본잎갈나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 2.11,
+    "utci_score": 5.1,
+    "shade_ratio": 0.643,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
     "shelter_nearby": false,
     "park_grade": 3,
@@ -2062,7 +3681,8 @@
     "start_point": {
       "lat": 37.3375,
       "lng": 127.079201
-    }
+    },
+    "calories": 80
   },
   {
     "id": "course-3-07",
@@ -2071,10 +3691,11 @@
     "distance_km": 1.2,
     "duration_min": 18,
     "is_loop": false,
-    "difficulty": "flat",
+    "difficulty": "moderate",
     "night_safe": false,
     "has_stream": false,
     "themes": [
+      "forest",
       "park"
     ],
     "facilities": {
@@ -2104,19 +3725,130 @@
           "emergency_bell": false
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3250258,
+          "lng": 127.1250517,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3250046,
+          "lng": 127.1258006,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3245539,
+          "lng": 127.1270285,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209785,
+          "lng": 127.1216788,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321333,
+          "lng": 127.1213689,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3200123,
+          "lng": 127.1176067,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3206665,
+          "lng": 127.1170452,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3204056,
+          "lng": 127.1213435,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209497,
+          "lng": 127.1217311,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209883,
+          "lng": 127.1223628,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321046,
+          "lng": 127.1225465,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3224352,
+          "lng": 127.1200009,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 3,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "oak",
+        "grass",
+        "meta"
+      ],
+      "description": "인공초지, 시가지, 도로, 인공나지, 졸참나무-상수리나무군락, 메타세콰이어식재림, 아까시나무식재림, 가로수가 식재된 도로, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무-상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "메타세콰이어식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 3.88,
+    "utci_score": 4.8,
+    "shade_ratio": 0.76,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
     "shelter_nearby": false,
     "park_grade": 3,
@@ -2124,7 +3856,8 @@
     "start_point": {
       "lat": 37.32226,
       "lng": 127.119358
-    }
+    },
+    "calories": 98
   },
   {
     "id": "course-3-08",
@@ -2135,9 +3868,12 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "lake",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -2310,27 +4046,244 @@
           "emergency_bell": true
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3248867,
+          "lng": 127.0907503,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3247939,
+          "lng": 127.0902534,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.32451,
+          "lng": 127.0911419,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3242983,
+          "lng": 127.0913384,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3238847,
+          "lng": 127.0917221,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232057,
+          "lng": 127.0915642,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3233745,
+          "lng": 127.091129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3244987,
+          "lng": 127.0901245,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3240174,
+          "lng": 127.091599,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3212675,
+          "lng": 127.0847822,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3232038,
+          "lng": 127.0866894,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3251202,
+          "lng": 127.0858847,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.320286,
+          "lng": 127.0940916,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196811,
+          "lng": 127.0930292,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3195306,
+          "lng": 127.0942685,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3196729,
+          "lng": 127.0949344,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3168404,
+          "lng": 127.0834272,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3160115,
+          "lng": 127.0820902,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3179336,
+          "lng": 127.0856666,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3180943,
+          "lng": 127.0833757,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3160371,
+          "lng": 127.0826656,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.316497,
+          "lng": 127.081304,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 21,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak",
+        "grass"
+      ],
+      "description": "자연초지, 호소, 밭, 인공초지, 시가지, 도로, 인공나지, 상수리나무군락, 굴참나무-리기다소나무군락, 굴참나무-밤나무군락, 참나무류-아까시나무군락, 잣나무식재림, 리기다소나무식재림, 아까시나무-밤나무식재림, 아까시나무식재림, 하천, 강기슭, 하천림, 가로수가 식재되지 않은 도로, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "잣나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무-밤나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.53,
+    "utci_score": 5.6,
+    "shade_ratio": 0.558,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "{zvbFyjsfWwq@_`@eSw^tSwQwA_D",
     "start_point": {
       "lat": 37.313901,
       "lng": 127.080292
-    }
+    },
+    "calories": 121
   },
   {
     "id": "course-3-09",
@@ -2339,11 +4292,13 @@
     "distance_km": 2.0,
     "duration_min": 30,
     "is_loop": false,
-    "difficulty": "flat",
+    "difficulty": "steep",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "lake",
+      "stream"
     ],
     "facilities": {
       "toilets": [],
@@ -2351,23 +4306,160 @@
     },
     "toilet_count": 0,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "pine",
+        "oak",
+        "bamboo",
+        "grass"
+      ],
+      "description": "호소, 시가지, 인공나지, 자연초지, 암벽·바위, 밭, 도로, 신갈나무-참나무류군락, 굴참나무-참나무류군락, 졸참나무군락, 참나무류군락, 참나무류-리기다소나무군락, 참나무류-소나무군락, 참나무류-밤나무군락, 신갈나무-아까시나무군락, 참나무류-아까시나무군락, 신갈나무-밤나무군락, 소나무군락, 소나무-리기다소나무군락, 대나무식재림, 리기다소나무식재림, 버드나무군락, 아까시나무식재림, 인공초지, 하천, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "암벽·바위",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "굴참나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "대나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "버드나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 14.51,
+    "utci_score": 3.2,
+    "shade_ratio": 0.875,
+    "biotope_grade": 2,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "uzzbFqlmfWaVhC??am@`|A",
     "start_point": {
       "lat": 37.334354,
       "lng": 127.049846
-    }
+    },
+    "calories": 228
   },
   {
     "id": "course-3-10",
@@ -2378,9 +4470,11 @@
     "is_loop": false,
     "difficulty": "flat",
     "night_safe": false,
-    "has_stream": false,
+    "has_stream": true,
     "themes": [
-      "park"
+      "forest",
+      "park",
+      "stream"
     ],
     "facilities": {
       "toilets": [
@@ -2409,26 +4503,1258 @@
           "emergency_bell": false
         }
       ],
-      "park_entrances": []
+      "park_entrances": [
+        {
+          "lat": 37.3160115,
+          "lng": 127.0820902,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3160371,
+          "lng": 127.0826656,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.316497,
+          "lng": 127.081304,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3156466,
+          "lng": 127.0699576,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3150118,
+          "lng": 127.0694815,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3146531,
+          "lng": 127.0706279,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3143779,
+          "lng": 127.0734,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3147406,
+          "lng": 127.0739581,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3143883,
+          "lng": 127.0745089,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3139073,
+          "lng": 127.0757443,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3135552,
+          "lng": 127.0755062,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3129559,
+          "lng": 127.0746862,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3136482,
+          "lng": 127.0747916,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3139075,
+          "lng": 127.0754447,
+          "name": "공원 입구"
+        }
+      ]
     },
     "toilet_count": 3,
     "vegetation": {
-      "tags": [],
-      "description": "",
-      "species": []
+      "tags": [
+        "oak",
+        "grass"
+      ],
+      "description": "밭, 인공초지, 시가지, 도로, 인공나지, 참나무류-아까시나무군락, 조경수목식재지, 하천, 자연초지, 강기슭, 하천림, 가로수가 식재되지 않은 도로, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "조경수목식재지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
     },
-    "slope_grade": 3.0,
-    "utci_score": 5.0,
-    "shade_ratio": 0.5,
-    "biotope_grade": 3,
-    "eco_axis": false,
+    "slope_grade": 1.95,
+    "utci_score": 6.3,
+    "shade_ratio": 0.37,
+    "biotope_grade": 5,
+    "eco_axis": true,
     "flood_risk": false,
-    "shelter_nearby": false,
+    "shelter_nearby": true,
     "park_grade": 3,
     "polyline": "okwbFkdqfWk@YpImd@o@kO|EcSxErBx@}A",
     "start_point": {
       "lat": 37.316559,
       "lng": 127.069025
-    }
+    },
+    "calories": 76
+  },
+  {
+    "id": "course-4-01",
+    "name": "동천동 근린공원",
+    "dong": "동천동",
+    "distance_km": 3.3,
+    "duration_min": 50,
+    "is_loop": true,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": true,
+    "themes": [
+      "forest",
+      "lake",
+      "park",
+      "stream"
+    ],
+    "facilities": {
+      "toilets": [],
+      "park_entrances": [
+        {
+          "lat": 37.3585733,
+          "lng": 127.068524,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3571133,
+          "lng": 127.0696756,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3546352,
+          "lng": 127.0709272,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3536348,
+          "lng": 127.0711935,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3522084,
+          "lng": 127.0722501,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3514,
+          "lng": 127.0723549,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3503412,
+          "lng": 127.0728129,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3493924,
+          "lng": 127.0741937,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3479643,
+          "lng": 127.0758041,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3496092,
+          "lng": 127.0780914,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3557067,
+          "lng": 127.0721178,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3558247,
+          "lng": 127.0719924,
+          "name": "공원 입구"
+        }
+      ]
+    },
+    "toilet_count": 0,
+    "vegetation": {
+      "tags": [
+        "pine",
+        "oak",
+        "grass"
+      ],
+      "description": "자연초지, 밭, 과수원, 기타재배지, 인공초지, 시가지, 도로, 인공나지, 신갈나무-참나무류군락, 신갈나무-굴참나무군락, 신갈나무-리기다소나무군락, 신갈나무-잣나무군락, 신갈나무-아까시나무군락, 참나무류-밤나무군락, 잣나무식재림, 밤나무-아까시나무식재림, 전나무식재림, 호소, 하천림, 하천, 강기슭, 묘포장, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "자연초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "과수원",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "기타재배지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-굴참나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-잣나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "신갈나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "참나무류-밤나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "잣나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밤나무-아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "전나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "호소",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "강기슭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "묘포장",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 2.51,
+    "utci_score": 5.4,
+    "shade_ratio": 0.485,
+    "biotope_grade": 5,
+    "eco_axis": true,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "ew~bFslrfWsKfFwKjSyE`OrBjDxE{OfMcLbJ{@dLgFfFk@fFgF~AaKeH_GyHbA}AvIgF?cDzD",
+    "start_point": {
+      "lat": 37.3542731,
+      "lng": 127.0754604
+    },
+    "calories": 190
+  },
+  {
+    "id": "course-4-02",
+    "name": "죽전 중앙공원",
+    "dong": "죽전1동",
+    "distance_km": 1.8,
+    "duration_min": 27,
+    "is_loop": true,
+    "difficulty": "moderate",
+    "night_safe": false,
+    "has_stream": true,
+    "themes": [
+      "forest",
+      "park",
+      "stream"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.320197,
+          "lng": 127.1131,
+          "name": "보정동 행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319458,
+          "lng": 127.116005,
+          "name": "용인보정동우체국",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.320053,
+          "lng": 127.110381,
+          "name": "죽전누리에들B동 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325459,
+          "lng": 127.126482,
+          "name": "야외음악당",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.319521,
+          "lng": 127.115824,
+          "name": "보정지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": [
+        {
+          "lat": 37.3209785,
+          "lng": 127.1216788,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321333,
+          "lng": 127.1213689,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3200123,
+          "lng": 127.1176067,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3199022,
+          "lng": 127.1157257,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3203679,
+          "lng": 127.1158059,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.320386,
+          "lng": 127.1162861,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3206665,
+          "lng": 127.1170452,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3199021,
+          "lng": 127.1166661,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3199711,
+          "lng": 127.1172505,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3204056,
+          "lng": 127.1213435,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209497,
+          "lng": 127.1217311,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3209883,
+          "lng": 127.1223628,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.321046,
+          "lng": 127.1225465,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3224352,
+          "lng": 127.1200009,
+          "name": "공원 입구"
+        }
+      ]
+    },
+    "toilet_count": 5,
+    "vegetation": {
+      "tags": [
+        "pine",
+        "oak",
+        "grass",
+        "meta"
+      ],
+      "description": "인공초지, 시가지, 도로, 인공나지, 상수리나무군락, 상수리나무-참나무류군락, 졸참나무-상수리나무군락, 졸참나무-리기다소나무군락, 상수리나무-소나무군락, 상수리나무-아까시나무군락, 소나무군락, 소나무-상수리나무군락, 일본잎갈나무식재림, 잣나무식재림, 메타세콰이어식재림, 리기다소나무식재림, 아까시나무식재림, 하천, 가로수가 식재된 도로, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공나지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-참나무류군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무-상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "졸참나무-리기다소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "상수리나무-아까시나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "소나무-상수리나무군락",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "일본잎갈나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "잣나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "메타세콰이어식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "리기다소나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "아까시나무식재림",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 3.87,
+    "utci_score": 4.9,
+    "shade_ratio": 0.75,
+    "biotope_grade": 5,
+    "eco_axis": true,
+    "flood_risk": false,
+    "shelter_nearby": false,
+    "park_grade": 3,
+    "polyline": "}jxbFcvzfW~DrFr@rFrBB[}L{AcALaT}@s@VuACiGcLbDnAfO~B~K",
+    "start_point": {
+      "lat": 37.321586,
+      "lng": 127.1179433
+    },
+    "calories": 146
+  },
+  {
+    "id": "course-4-03",
+    "name": "수지 체육공원",
+    "dong": "풍덕천1동",
+    "distance_km": 1.0,
+    "duration_min": 15,
+    "is_loop": true,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.32797,
+          "lng": 127.095012,
+          "name": "풍덕천1동 행정복지센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.331036,
+          "lng": 127.095356,
+          "name": "삼풍동어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.330019,
+          "lng": 127.098443,
+          "name": "수지체육공원실내배드민턴장",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32519,
+          "lng": 127.101957,
+          "name": "수지지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "수지119안전센터",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "제2현장지휘단",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326333,
+          "lng": 127.09616,
+          "name": "중앙어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.327025,
+          "lng": 127.092849,
+          "name": "도장골어린이공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": [
+        {
+          "lat": 37.3285258,
+          "lng": 127.0936281,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3287036,
+          "lng": 127.0950268,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3291036,
+          "lng": 127.0955003,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3297841,
+          "lng": 127.094598,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3289917,
+          "lng": 127.0928549,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3288964,
+          "lng": 127.095833,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3277976,
+          "lng": 127.0974272,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285227,
+          "lng": 127.0989419,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3281734,
+          "lng": 127.0988411,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3301062,
+          "lng": 127.0989409,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3307199,
+          "lng": 127.0992246,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3306214,
+          "lng": 127.0978751,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3303562,
+          "lng": 127.097622,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3291855,
+          "lng": 127.0961819,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285875,
+          "lng": 127.1013036,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285036,
+          "lng": 127.1014902,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3287017,
+          "lng": 127.1011778,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3287259,
+          "lng": 127.1019123,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285555,
+          "lng": 127.1017121,
+          "name": "공원 입구"
+        }
+      ]
+    },
+    "toilet_count": 8,
+    "vegetation": {
+      "tags": [],
+      "description": "인공초지, 시가지, 도로, 가로수가 식재된 도로, 밭, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 1.94,
+    "utci_score": 4.7,
+    "shade_ratio": 0.762,
+    "biotope_grade": 5,
+    "eco_axis": false,
+    "flood_risk": false,
+    "shelter_nearby": true,
+    "park_grade": 3,
+    "polyline": "}sybFk~vfWaLCg@eAuAAFtGvJpLzCcFl@eHi@qB",
+    "start_point": {
+      "lat": 37.3281461,
+      "lng": 127.0987778
+    },
+    "calories": 57
+  },
+  {
+    "id": "course-4-04",
+    "name": "용인 아르피아 체육공원",
+    "dong": "죽전2동",
+    "distance_km": 1.2,
+    "duration_min": 18,
+    "is_loop": true,
+    "difficulty": "flat",
+    "night_safe": false,
+    "has_stream": true,
+    "themes": [
+      "park",
+      "stream"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.323407,
+          "lng": 127.110589,
+          "name": "탄천 엑스파크공원",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.324884,
+          "lng": 127.107388,
+          "name": "죽전역",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "포은아트홀",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326121,
+          "lng": 127.110858,
+          "name": "탄천 죽전삼거리",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "수지레스피아배드민턴장",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.328791,
+          "lng": 127.10862,
+          "name": "에프앤에프 콜렉티드",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325325,
+          "lng": 127.110004,
+          "name": "(주)이마트 죽전점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32587,
+          "lng": 127.105904,
+          "name": "아르피아스포츠센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.32519,
+          "lng": 127.101957,
+          "name": "수지지구대",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325003,
+          "lng": 127.108109,
+          "name": "신세계백화점 경기점",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "수지119안전센터",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.326049,
+          "lng": 127.100158,
+          "name": "제2현장지휘단",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.325909,
+          "lng": 127.106739,
+          "name": "죽전2동 주민센터",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.329884,
+          "lng": 127.109359,
+          "name": "예스병원용인분당점",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.332564,
+          "lng": 127.104875,
+          "name": "죽전휴게소(서울)",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        }
+      ],
+      "park_entrances": [
+        {
+          "lat": 37.3285875,
+          "lng": 127.1013036,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285036,
+          "lng": 127.1014902,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3287017,
+          "lng": 127.1011778,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3287259,
+          "lng": 127.1019123,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3285555,
+          "lng": 127.1017121,
+          "name": "공원 입구"
+        }
+      ]
+    },
+    "toilet_count": 15,
+    "vegetation": {
+      "tags": [],
+      "description": "밭, 인공초지, 시가지, 도로, 식생이 없는 철로, 하천, 가로수가 식재된 도로, 가로수가 식재되지 않은 도로",
+      "species": [
+        {
+          "name": "밭",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "식생이 없는 철로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "하천",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 2.03,
+    "utci_score": 5.7,
+    "shade_ratio": 0.52,
+    "biotope_grade": 5,
+    "eco_axis": true,
+    "flood_risk": false,
+    "shelter_nearby": true,
+    "park_grade": 3,
+    "polyline": "}gybFagxfW\\wKuR[K`T~POb@}E",
+    "start_point": {
+      "lat": 37.3262282,
+      "lng": 127.1052881
+    },
+    "calories": 68
+  },
+  {
+    "id": "course-4-05",
+    "name": "상현공원",
+    "dong": "상현2동",
+    "distance_km": 0.8,
+    "duration_min": 12,
+    "is_loop": true,
+    "difficulty": "moderate",
+    "night_safe": false,
+    "has_stream": false,
+    "themes": [
+      "park"
+    ],
+    "facilities": {
+      "toilets": [
+        {
+          "lat": 37.30786,
+          "lng": 127.084681,
+          "name": "거묵프라자",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.309469,
+          "lng": 127.08597,
+          "name": "헤르메스상가 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.312753,
+          "lng": 127.081777,
+          "name": "A화장실",
+          "accessible": true,
+          "children": true,
+          "emergency_bell": true
+        },
+        {
+          "lat": 37.310381,
+          "lng": 127.086541,
+          "name": "상현2동 주민센터",
+          "accessible": true,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.30676,
+          "lng": 127.084608,
+          "name": "원희캐슬프라자 개방화장실",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        },
+        {
+          "lat": 37.308872,
+          "lng": 127.085285,
+          "name": "상현종합상가",
+          "accessible": false,
+          "children": false,
+          "emergency_bell": false
+        }
+      ],
+      "park_entrances": [
+        {
+          "lat": 37.3111399,
+          "lng": 127.0869093,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3112952,
+          "lng": 127.0873669,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3124296,
+          "lng": 127.0877986,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3125824,
+          "lng": 127.0873281,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3112321,
+          "lng": 127.0863864,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3137792,
+          "lng": 127.0899436,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3111858,
+          "lng": 127.0894692,
+          "name": "공원 입구"
+        },
+        {
+          "lat": 37.3102454,
+          "lng": 127.0902298,
+          "name": "공원 입구"
+        }
+      ]
+    },
+    "toilet_count": 6,
+    "vegetation": {
+      "tags": [],
+      "description": "도로, 시가지, 인공초지, 가로수가 식재되지 않은 도로, 가로수가 식재된 도로",
+      "species": [
+        {
+          "name": "도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "시가지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "인공초지",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재되지 않은 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        },
+        {
+          "name": "가로수가 식재된 도로",
+          "pollen_period": "",
+          "bloom_period": ""
+        }
+      ]
+    },
+    "slope_grade": 3.49,
+    "utci_score": 4.6,
+    "shade_ratio": 0.812,
+    "biotope_grade": 5,
+    "eco_axis": true,
+    "flood_risk": false,
+    "shelter_nearby": true,
+    "park_grade": 3,
+    "polyline": "wcvbFiutfWkQcE|EhHvFfBtBmE",
+    "start_point": {
+      "lat": 37.3101995,
+      "lng": 127.0870886
+    },
+    "calories": 65
   }
 ]
