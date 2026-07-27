@@ -12,7 +12,7 @@ import type {
  * - required → 하드 필터 (미충족 코스 제외)
  * - preferred → 점수 가중치 (우선 추천)
  * - null → 무시
- * - unsupportedConditions → 변환 결과에 그대로 전달 (필터·점수 계산에는 사용하지 않음)
+ * - conditionNotes → 변환 결과에 그대로 전달 (필터·점수 계산에는 사용하지 않음)
  */
 export function convertExtractedConditions(
   extracted: ExtractedConditions
@@ -40,7 +40,7 @@ export function convertExtractedConditions(
     coolPriority: extracted.cool === "preferred",
     toiletPriority: extracted.toilet === "preferred",
     naturePriority: extracted.nature === "preferred",
-    unsupportedConditions: extracted.unsupportedConditions,
+    conditionNotes: extracted.conditionNotes,
   };
 }
 
@@ -51,7 +51,7 @@ export function buildRecommendationParams(
 ): {
   filterOptions: FilterOptions;
   weights: FilterWeights;
-  unsupportedConditions: string[];
+  conditionNotes: ConvertedConditions["conditionNotes"];
 } {
   const dong = converted.dong ?? fallbackDong;
 
@@ -88,6 +88,6 @@ export function buildRecommendationParams(
   return {
     filterOptions,
     weights,
-    unsupportedConditions: converted.unsupportedConditions,
+    conditionNotes: converted.conditionNotes,
   };
 }

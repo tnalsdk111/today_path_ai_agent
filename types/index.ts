@@ -114,6 +114,9 @@ export interface FilterWeights {
 export type {
   ConditionStrength,
   DurationCondition,
+  ConditionNoteStatus,
+  ConditionNoteReason,
+  ConditionNote,
   ExtractedConditions,
   ConvertedConditions,
 } from "./ai";

@@ -14,7 +14,12 @@ export const MOCK_EXTRACTED_CONDITIONS: ExtractedConditions = {
   toilet: "preferred",
   nature: null,
   nightSafe: null,
-  unsupportedConditions: [
-    "'30분 정도'는 '30분 이내' 조건으로 근사했습니다.",
+  conditionNotes: [
+    {
+      sourceText: "30분 정도",
+      status: "approximated",
+      reason: "unsupported_duration",
+      appliedValue: 30,
+    },
   ],
 };
