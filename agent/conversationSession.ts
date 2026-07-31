@@ -31,3 +31,7 @@ export function getConversationDong(conversationId: string): string | null {
   }
   return session.dong;
 }
+
+export function clearConversationDong(conversationId: string): void {
+  getStore().delete(conversationId);
+}

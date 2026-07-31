@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server";
 import {
+  clearConversationDong,
   getConversationDong,
   setConversationDong,
 } from "@/agent/conversationSession";
+import {
+  detectUserIntent,
+  formatDongResetMessage,
+  formatSupportedDongsMessage,
+} from "@/agent/detectUserIntent";
 import {
   parseAgentRequest,
   pickQueryFromRequest,
@@ -24,6 +30,10 @@ export const dynamic = "force-dynamic";
  * 2단계 — 추가 조건 (dong은 body 또는 1단계 conversation_id 세션)
  *   POST { "dong": "풍덕천1동", "message": "시원한 길" }
  *   POST { "conversation_id": "...", "message": "시원한 길" }
+ *
+ * 메타 — 동 초기화 / 지원 동 목록 (세션보다 우선)
+ *   POST { "conversation_id": "...", "message": "동 초기화해줘" }
+ *   POST { "conversation_id": "...", "message": "지원하는 동이 어디야?" }
  */
 export async function POST(req: Request) {
   try {
@@ -37,6 +47,45 @@ export async function POST(req: Request) {
       query = queryFromUrl;
     }
 
+    if (query) {
+      const intent = detectUserIntent(query);
+
+      if (intent.type === "list_supported_dongs") {
+        return NextResponse.json({
+          status: "list_supported_dongs",
+          supportedDongs: [...SUPPORTED_DONGS],
+          message: formatSupportedDongsMessage(),
+          conversationId,
+        });
+      }
+
+      if (intent.type === "reset_dong") {
+        if (conversationId) clearConversationDong(conversationId);
+        return NextResponse.json({
+          status: "dong_reset",
+          supportedDongs: [...SUPPORTED_DONGS],
+          message: formatDongResetMessage(),
+          conversationId,
+        });
+      }
+
+      if (intent.type === "select_dong") {
+        if (conversationId) {
+          setConversationDong(conversationId, intent.dong);
+        }
+        const result = runDongIntro(intent.dong);
+        return NextResponse.json({
+          ...result,
+          conversationId,
+          hint: "2단계에서는 message/query 필드로 조건을 함께 전달하세요.",
+        });
+      }
+
+      if (intent.type === "recommend") {
+        query = intent.query;
+      }
+    }
+
     if (!dong && conversationId) {
       dong = getConversationDong(conversationId);
     }
@@ -48,6 +97,7 @@ export async function POST(req: Request) {
           hint:
             "1단계: { \"dong\": \"풍덕천1동\" } 또는 { \"conversation_id\": \"...\", \"message\": \"풍덕천1동\" }. 2단계: dong 또는 conversation_id(1단계 저장) + message(조건) 필요.",
           supportedDongs: [...SUPPORTED_DONGS],
+          message: formatSupportedDongsMessage(),
           received: rawBody,
         },
         { status: 400 },
