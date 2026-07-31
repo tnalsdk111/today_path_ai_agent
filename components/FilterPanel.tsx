@@ -8,10 +8,10 @@ interface Chip<T> {
   value: T;
 }
 
-const DURATION_CHIPS: Chip<30 | 60 | 120>[] = [
+const DURATION_CHIPS: Chip<30 | 60 | 999>[] = [
   { label: "30분 이내", value: 30 },
   { label: "1시간 이내", value: 60 },
-  { label: "2시간 이내", value: 120 },
+  { label: "1시간 이상", value: 999 },
 ];
 
 const THEME_CHIPS: Chip<Theme>[] = [

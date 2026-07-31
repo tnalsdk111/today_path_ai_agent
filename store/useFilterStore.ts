@@ -1,9 +1,10 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import { Theme } from "@/types/index";
 
 interface FilterState {
   dong: string | null;
-  duration: 30 | 60 | 120 | null;
+  duration: 30 | 60 | 999 | null;
   themes: Theme[];
   nightSafe: boolean;
   flatPriority: boolean;
@@ -12,7 +13,7 @@ interface FilterState {
   naturePriority: boolean;
 
   setDong: (dong: string) => void;
-  setDuration: (duration: 30 | 60 | 120 | null) => void;
+  setDuration: (duration: 30 | 60 | 999 | null) => void;
   toggleTheme: (theme: Theme) => void;
   setNightSafe: (v: boolean) => void;
   setFlatPriority: (v: boolean) => void;
@@ -33,21 +34,46 @@ const initialState = {
   naturePriority: false,
 };
 
-export const useFilterStore = create<FilterState>((set) => ({
-  ...initialState,
+export const useFilterStore = create<FilterState>()(
+  persist(
+    (set) => ({
+      ...initialState,
 
-  setDong: (dong) => set({ dong }),
-  setDuration: (duration) => set({ duration }),
-  toggleTheme: (theme) =>
-    set((state) => ({
-      themes: state.themes.includes(theme)
-        ? state.themes.filter((t) => t !== theme)
-        : [...state.themes, theme],
-    })),
-  setNightSafe: (v) => set({ nightSafe: v }),
-  setFlatPriority: (v) => set({ flatPriority: v }),
-  setCoolPriority: (v) => set({ coolPriority: v }),
-  setToiletPriority: (v) => set({ toiletPriority: v }),
-  setNaturePriority: (v) => set({ naturePriority: v }),
-  reset: () => set(initialState),
-}));
+      setDong: (dong) => set({ dong }),
+      setDuration: (duration) => set({ duration }),
+      toggleTheme: (theme) =>
+        set((state) => ({
+          themes: state.themes.includes(theme)
+            ? state.themes.filter((t) => t !== theme)
+            : [...state.themes, theme],
+        })),
+      setNightSafe: (v) => set({ nightSafe: v }),
+      setFlatPriority: (v) => set({ flatPriority: v }),
+      setCoolPriority: (v) => set({ coolPriority: v }),
+      setToiletPriority: (v) => set({ toiletPriority: v }),
+      setNaturePriority: (v) => set({ naturePriority: v }),
+      reset: () => set(initialState),
+    }),
+    {
+      name: "today-path-filter",
+      version: 1,
+      migrate: (persistedState: unknown, version: number) => {
+        if (version === 0) {
+          const state = persistedState as Record<string, unknown>;
+          if (state.duration === 120) state.duration = null;
+        }
+        return persistedState;
+      },
+      partialize: (state) => ({
+        dong: state.dong,
+        duration: state.duration,
+        themes: state.themes,
+        nightSafe: state.nightSafe,
+        flatPriority: state.flatPriority,
+        coolPriority: state.coolPriority,
+        toiletPriority: state.toiletPriority,
+        naturePriority: state.naturePriority,
+      }),
+    }
+  )
+);

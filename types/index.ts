@@ -2,7 +2,7 @@
 export type Theme = "park" | "lake" | "forest" | "stream";
 
 // 꽃가루 종류
-export type PollenTag = "pine" | "birch" | "grass" | "oak";
+export type PollenTag = "pine" | "birch" | "grass" | "oak" | "meta" | "bamboo";
 
 // 대기질 등급
 export type AirGrade = "좋음" | "보통" | "나쁨" | "매우나쁨";
@@ -32,7 +32,7 @@ export interface VegetationSpecies {
   name: string;          // 예: "소나무"
   bloom_period: string;  // 예: "3월~5월"
   pollen_period: string; // 예: "4월~5월"
-  note: string;          // 예: "꽃가루 주의"
+  note?: string;         // 예: "꽃가루 주의"
 }
 
 // 산책 코스 정보
@@ -43,7 +43,7 @@ export interface Course {
   distance_km: number;
   duration_min: number;
   is_loop: boolean;
-  difficulty: "flat" | "moderate";
+  difficulty: "flat" | "moderate" | "steep";
   night_safe: boolean;
   has_stream: boolean;
   themes: Theme[];
@@ -52,6 +52,7 @@ export interface Course {
   facilities: { toilets: ToiletFacility[]; park_entrances: Facility[] };
   toilet_count: number;
   vegetation: { tags: PollenTag[]; description: string; species: VegetationSpecies[] };
+  calories: number;        // 소모 칼로리 (kcal), 60kg 기준
   slope_grade: number;     // DTM 기반 평균 경사도, 낮을수록 평탄
   utci_score: number;      // 1~10, 낮을수록 시원
   shade_ratio: number;     // 0~1, 그늘 비율
@@ -86,11 +87,16 @@ export interface WeatherData {
 }
 
 // 필터 조건
+// 수동, AI 두 경로를 모두 담는 공통 타입
 export interface FilterOptions {
   dong: string;
-  duration?: 30 | 60 | 120;
+  duration?: 30 | 60 | 999;
   themes?: Theme[];
   nightSafe?: boolean;
+  flatRequired?: boolean;
+  coolRequired?: boolean;
+  toiletRequired?: boolean;
+  natureRequired?: boolean;
   flatPriority?: boolean;
   coolPriority?: boolean;
   toiletPriority?: boolean;
@@ -104,3 +110,13 @@ export interface FilterWeights {
   toilet: number;
   nature: number;
 }
+
+export type {
+  ConditionStrength,
+  DurationCondition,
+  ConditionNoteStatus,
+  ConditionNoteReason,
+  ConditionNote,
+  ExtractedConditions,
+  ConvertedConditions,
+} from "./ai";

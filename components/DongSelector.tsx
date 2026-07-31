@@ -1,19 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { SUPPORTED_DONGS } from "@/lib/supportedDongs";
 import { useFilterStore } from "@/store/useFilterStore";
-
-const DONG_LIST = [
-  "풍덕천1동",
-  "풍덕천2동",
-  "신봉동",
-  "죽전1동",
-  "죽전2동",
-  "상현1동",
-  "상현2동",
-  "성복동",
-  "동천동",
-];
 
 export default function DongSelector() {
   const [open, setOpen] = useState(false);
@@ -67,7 +56,7 @@ export default function DongSelector() {
             className="absolute top-full left-0 right-0 mt-1 bg-surface-container-lowest rounded-lg z-10 overflow-hidden"
             style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
           >
-            {DONG_LIST.map((name) => (
+            {SUPPORTED_DONGS.map((name) => (
               <li key={name}>
                 <button
                   type="button"

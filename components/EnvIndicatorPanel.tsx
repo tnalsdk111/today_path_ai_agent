@@ -4,146 +4,119 @@ interface EnvIndicatorPanelProps {
   course: Course;
 }
 
-interface UtciGrade {
+interface Tag {
   label: string;
   bg: string;
   text: string;
 }
 
-function getUtciGrade(score: number): UtciGrade {
-  if (score <= 3) return { label: "매우 쾌적", bg: "bg-[#EAF3EC]", text: "text-[#2A6B35]" };
-  if (score <= 5) return { label: "쾌적",     bg: "bg-[#EAF3EC]", text: "text-[#2A6B35]" };
-  if (score <= 7) return { label: "보통",     bg: "bg-[#FFF8E1]", text: "text-[#F57F17]" };
-  if (score <= 9) return { label: "더움",     bg: "bg-orange-100", text: "text-orange-700" };
-  return             { label: "매우 더움", bg: "bg-red-100",    text: "text-red-700"   };
+function getUtciTag(score: number): Tag {
+  if (score <= 3) return { label: "매우 시원함", bg: "bg-blue-50", text: "text-blue-700" };
+  if (score <= 5) return { label: "쾌적", bg: "bg-[#EAF3EC]", text: "text-primary" };
+  if (score <= 7) return { label: "따뜻함", bg: "bg-orange-50", text: "text-orange-700" };
+  return { label: "더움", bg: "bg-red-50", text: "text-red-700" };
 }
 
-const BIOTOPE_LABEL: Record<number, string> = {
-  1: "매우 우수",
-  2: "우수",
-  3: "보통",
-  4: "낮음",
-  5: "매우 낮음",
-};
+function getShadeTags(ratio: number): Tag[] {
+  if (ratio < 0.3)
+    return [
+      { label: "그늘 거의 없음", bg: "bg-orange-50", text: "text-orange-700" },
+      { label: "양산 필요", bg: "bg-orange-50", text: "text-orange-700" },
+    ];
+  if (ratio < 0.6)
+    return [{ label: "일부 그늘", bg: "bg-[#EAF3EC]", text: "text-primary" }];
+  if (ratio < 0.8)
+    return [{ label: "대부분 그늘", bg: "bg-[#EAF3EC]", text: "text-primary" }];
+  return [{ label: "그늘 충분", bg: "bg-blue-50", text: "text-blue-700" }];
+}
+
+// grade 4~5는 null 반환 → 행 미표시
+function getBiotopeTag(grade: number): Tag | null {
+  if (grade === 1 || grade === 2)
+    return { label: "자연이 잘 보존된 코스", bg: "bg-[#EAF3EC]", text: "text-primary" };
+  if (grade === 3)
+    return { label: "녹지가 있는 코스", bg: "bg-surface-container", text: "text-on-surface-variant" };
+  return null;
+}
 
 function Divider() {
-  return <div className="h-[0.5px] bg-[#EEEEEE] w-full" />;
+  return <div className="h-[0.5px] bg-outline-variant/30" />;
 }
 
-function Row({ children }: { children: React.ReactNode }) {
+function TagBadge({ tag }: { tag: Tag }) {
   return (
-    <div className="flex items-center justify-between h-[44px]">{children}</div>
+    <span
+      className={`${tag.bg} ${tag.text} font-label-sm text-label-sm px-2 py-0.5 rounded-full`}
+    >
+      {tag.label}
+    </span>
   );
 }
 
-function RowLeft({ icon, label }: { icon: string; label: string }) {
+function Row({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">
-        {icon}
-      </span>
-      <span className="font-body-md text-body-md text-on-surface">{label}</span>
+    <div className="flex items-center justify-between min-h-[44px] py-1 gap-2">
+      <span className="font-body-md text-body-md text-on-surface shrink-0">{label}</span>
+      <div className="flex gap-1 flex-wrap justify-end">{children}</div>
     </div>
   );
-}
-
-function CheckBadge({ text }: { text: string }) {
-  return (
-    <div className="flex items-center gap-1">
-      <span
-        className="material-symbols-outlined text-[#2A6B35] text-[18px]"
-        style={{ fontVariationSettings: "'FILL' 1" }}
-      >
-        check_circle
-      </span>
-      <span className="text-[13px] text-[#2A6B35] font-medium">{text}</span>
-    </div>
-  );
-}
-
-function Dash() {
-  return <span className="text-[13px] text-on-surface-variant">—</span>;
 }
 
 export default function EnvIndicatorPanel({ course }: EnvIndicatorPanelProps) {
-  const utci = getUtciGrade(course.utci_score);
-  const shadePercent = Math.round(course.shade_ratio * 100);
-  const biotopeLabel = BIOTOPE_LABEL[course.biotope_grade] ?? "알 수 없음";
+  const utciTag = getUtciTag(course.utci_score);
+  const shadeTags = getShadeTags(course.shade_ratio);
+  const biotopeTag = getBiotopeTag(course.biotope_grade);
 
   return (
-    <div
-      className="bg-white rounded-[16px] p-md mb-md"
-      style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-    >
-      {/* 섹션 헤더 */}
-      <div className="flex flex-col mb-2">
-        <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-[#2A6B35] text-[20px]">
-            thermometer
-          </span>
-          <span className="text-[16px] font-bold text-[#1A3A1A]">환경 지표</span>
-        </div>
-        <span className="text-[12px] text-[#9E9E9E] ml-[32px]">
-          기후플랫폼 데이터 기반
-        </span>
-      </div>
+    <section className="mb-md">
+      <h2 className="font-h3 text-h3 text-on-surface mb-sm">이 코스의 환경</h2>
 
-      {/* 지표 행 목록 */}
       <div className="flex flex-col">
-        {/* Row 1 — 체감온도 */}
-        <Row>
-          <RowLeft icon="device_thermostat" label="체감온도 (UTCI)" />
-          <span
-            className={`${utci.bg} ${utci.text} text-[13px] font-semibold px-3 py-1 rounded-[8px]`}
-          >
-            {utci.label}
-          </span>
+        <Row label="체감온도 (UTCI)">
+          <TagBadge tag={utciTag} />
         </Row>
 
         <Divider />
 
-        {/* Row 2 — 그늘 비율 */}
-        <Row>
-          <RowLeft icon="partly_cloudy_day" label="그늘 비율" />
-          <div className="flex items-center gap-2">
-            <span className="text-[13px] text-on-surface font-medium">
-              {shadePercent}%
-            </span>
-            <div className="w-[80px] h-[6px] bg-[#E0E0E0] rounded-full overflow-hidden">
-              <div
-                className="bg-[#2A6B35] h-full"
-                style={{ width: `${shadePercent}%` }}
-              />
-            </div>
-          </div>
+        <Row label="그늘">
+          {shadeTags.map((tag) => (
+            <TagBadge key={tag.label} tag={tag} />
+          ))}
         </Row>
 
-        <Divider />
+        {biotopeTag && (
+          <>
+            <Divider />
+            <Row label="자연 보존 등급">
+              <TagBadge tag={biotopeTag} />
+            </Row>
+          </>
+        )}
 
-        {/* Row 3 — 생태 가치 */}
-        <Row>
-          <RowLeft icon="eco" label="생태 가치 (비오톱)" />
-          <span className="bg-[#E0F2F1] text-[#00695C] text-[13px] font-semibold px-3 py-1 rounded-[8px]">
-            {course.biotope_grade}등급 ({biotopeLabel})
-          </span>
-        </Row>
+        {course.eco_axis && (
+          <>
+            <Divider />
+            <Row label="자연 연결 구간">
+              <TagBadge tag={{ label: "자연 연결 구간을 지나요", bg: "bg-[#EAF3EC]", text: "text-primary" }} />
+            </Row>
+          </>
+        )}
 
-        <Divider />
-
-        {/* Row 4 — 생태축 인접 */}
-        <Row>
-          <RowLeft icon="hub" label="생태축 인접" />
-          {course.eco_axis ? <CheckBadge text="인접" /> : <Dash />}
-        </Row>
-
-        <Divider />
-
-        {/* Row 5 — 무더위쉼터 */}
-        <Row>
-          <RowLeft icon="home" label="무더위쉼터" />
-          {course.shelter_nearby ? <CheckBadge text="쉼터 인근" /> : <Dash />}
-        </Row>
+        {course.shelter_nearby && (
+          <>
+            <Divider />
+            <Row label="무더위쉼터">
+              <TagBadge tag={{ label: "근처에 쉼터가 있어요", bg: "bg-[#EAF3EC]", text: "text-primary" }} />
+            </Row>
+          </>
+        )}
       </div>
-    </div>
+    </section>
   );
 }
