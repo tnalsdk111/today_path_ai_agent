@@ -1,31 +1,42 @@
 import { NextResponse } from "next/server";
+import {
+  parseAgentRequest,
+  readAgentRequestBody,
+} from "@/agent/parseAgentRequest";
 import { runDongIntro } from "@/agent/runDongIntro";
 import { runWalkRecommendation } from "@/agent/runWalkRecommendation";
+import { SUPPORTED_DONGS } from "@/lib/supportedDongs";
 
 export const dynamic = "force-dynamic";
 
 /**
  * 산책로 추천 에이전트 API (2단계 대화)
  *
- * 1단계 — 동만 선택 (query 없음)
+ * 1단계 — 동 선택
  *   POST { "dong": "풍덕천1동" }
- *   → 해당 동 산책로 목록 + 추가 조건 안내
+ *   POST { "message": "풍덕천1동" }
+ *   POST 풍덕천1동  (plain text)
  *
- * 2단계 — 추가 조건 입력
+ * 2단계 — 추가 조건
  *   POST { "dong": "풍덕천1동", "query": "30분 이내 시원한 길" }
- *   → 조건에 맞는 산책로 추천
+ *   POST { "dong": "풍덕천1동", "message": "시원한 길" }
  */
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const query = typeof body?.query === "string" ? body.query.trim() : "";
-    const dong =
-      typeof body?.dong === "string" && body.dong.trim()
-        ? body.dong.trim()
-        : null;
+    const rawBody = await readAgentRequestBody(req);
+    const { dong, query } = parseAgentRequest(rawBody);
 
     if (!dong) {
-      return NextResponse.json({ error: "dong is required" }, { status: 400 });
+      return NextResponse.json(
+        {
+          error: "dong is required",
+          hint:
+            "JSON 예: { \"dong\": \"풍덕천2동\" } 또는 { \"message\": \"풍덕천2동\" }. 동 이름만 plain text로도 가능합니다.",
+          supportedDongs: [...SUPPORTED_DONGS],
+          received: rawBody,
+        },
+        { status: 400 },
+      );
     }
 
     if (!query) {
