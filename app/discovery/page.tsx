@@ -1,75 +1,119 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import Link from "next/link";
-import {
-  discoveryVideos,
-  getYoutubeThumbnailUrl,
-  type DiscoveryVideo,
-  type VideoTag,
-} from "./videoData";
-
-type FilterValue = "전체" | VideoTag;
-
-const FILTER_OPTIONS: FilterValue[] = ["전체", "건강", "산책로", "노래"];
-
-const NAV_TABS = [
-  { icon: "map", label: "추천", href: "/", active: false },
-  { icon: "explore", label: "탐색", href: "/discovery", active: true },
-  { icon: "route", label: "내 경로", href: "#", active: false },
-  { icon: "person", label: "프로필", href: "#", active: false },
-];
-
-const TAG_CHIP_CLASS: Record<VideoTag, string> = {
-  건강: "bg-[#EAF3EC] text-primary",
-  산책로: "bg-secondary-container text-primary-container",
-  노래: "bg-[#E3F0FF] text-[#1A4D8F]",
-};
-
-function filterChipClass(active: boolean): string {
-  const base =
-    "shrink-0 rounded-full px-md py-1.5 font-body-md text-body-md transition-transform active:scale-95";
-  return active
-    ? `${base} bg-primary text-on-primary`
-    : `${base} bg-surface-container-lowest border border-outline-variant text-on-surface-variant`;
-}
-
-function VideoCard({ video }: { video: DiscoveryVideo }) {
-  return (
-    <a
-      href={video.videoUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block bg-surface-container-lowest rounded-xl overflow-hidden"
-      style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-    >
-      <div className="relative w-full aspect-video bg-surface-container">
-        <img
-          src={getYoutubeThumbnailUrl(video.youtubeId)}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="p-md flex flex-col gap-xs">
-        <h3 className="font-h3 text-h3 text-on-surface line-clamp-2">{video.title}</h3>
-        <p className="font-body-md text-body-md text-on-surface-variant">{video.channelName}</p>
-        <span
-          className={`self-start mt-1 rounded-full px-2 py-0.5 font-label-sm text-label-sm ${TAG_CHIP_CLASS[video.tag]}`}
-        >
-          {video.tag}
-        </span>
-      </div>
-    </a>
-  );
-}
+import { useEffect, useState } from "react";
+import DongSelector from "@/components/DongSelector";
+import BottomNav from "@/components/BottomNav";
+import CourseCard from "@/components/CourseCard";
+import UnsupportedDongNotice from "@/components/UnsupportedDongNotice";
+import { rankAiRecommendedCourses } from "@/lib/rankAiRecommendedCourses";
+import { resolveDong } from "@/lib/resolveDong";
+import { MOCK_WEATHER } from "@/lib/mockWeather";
+import { useAiStore } from "@/store/useAiStore";
+import { useFilterStore } from "@/store/useFilterStore";
+import type { ExtractedConditions } from "@/types/ai";
+import type { Course, WeatherData } from "@/types/index";
 
 export default function DiscoveryPage() {
-  const [activeFilter, setActiveFilter] = useState<FilterValue>("전체");
+  // 홈과 공유하는 상태(Zustand)
+  const dong = useFilterStore((s) => s.dong); // 홈과 공유하는 선택 동
+  const extractedConditions = useAiStore((s) => s.extractedConditions); // AI 분석 결과
+  const setExtractedConditions = useAiStore((s) => s.setExtractedConditions); // AI 분석 결과 설정
 
-  const filteredVideos = useMemo(() => {
-    if (activeFilter === "전체") return discoveryVideos;
-    return discoveryVideos.filter((video) => video.tag === activeFilter);
-  }, [activeFilter]);
+  // 현재 페이지에서 사용하는 상태 (로컬 state)
+  const [query, setQuery] = useState(""); // 사용자 입력 쿼리
+  const [unsupportedSourceText, setUnsupportedSourceText] = useState<string | null>(null); // null이 아니면 UnsupportedDongNotice 표시
+  const [rankedCourses, setRankedCourses] = useState<Course[]>([]); // 추천된 코스 목록
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null); // 날씨, 꽃가루
+  const [missingDongMessage, setMissingDongMessage] = useState(false); // 동이 없을 때 안내 표시 여부
+  const [isAnalyzing, setIsAnalyzing] = useState(false); // GPT 분석 중
+  const [analyzeError, setAnalyzeError] = useState<string | null>(null); // 분석 실패 메시지
+
+  // 날씨, 꽃가루 데이터 가져오기
+  useEffect(() => {
+    fetch("/api/weather")
+      .then((res) => {
+        if (!res.ok) throw new Error("fetch failed");
+        return res.json();
+      })
+      .then((data) => {
+        if (!data?.weather) throw new Error("invalid response");
+        return data as WeatherData;
+      })
+      .then((data) => setWeatherData(data))
+      .catch(() => setWeatherData(MOCK_WEATHER));
+  }, []);
+
+  // 추천 실행 - finalDong과 분석 결과로 코스를 계산한다.
+  function runRecommendation(extracted: typeof extractedConditions, finalDong: string) {
+    if (!extracted || !weatherData) return;
+
+    const courses = rankAiRecommendedCourses(extracted, finalDong, weatherData);
+    setRankedCourses(courses);
+    setUnsupportedSourceText(null);
+    setMissingDongMessage(false);
+  }
+
+  function applyRecommendation(extracted: ExtractedConditions) {
+    const resolution = resolveDong(extracted.dong, dong);
+
+    if (resolution.status === "resolved") {
+      runRecommendation(extracted, resolution.dong);
+      return;
+    }
+
+    setRankedCourses([]);
+
+    if (resolution.status === "unsupported") {
+      setUnsupportedSourceText(resolution.sourceText);
+      setMissingDongMessage(false);
+      return;
+    }
+
+    setUnsupportedSourceText(null);
+    setMissingDongMessage(true);
+  }
+
+  // 사용자 입력 처리 - '추천 받기' 클릭 -> GPT 분석 후 추천 실행
+  async function handleRecommend() {
+    setIsAnalyzing(true);
+    setAnalyzeError(null);
+
+    try {
+      const res = await fetch("/api/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data?.error ?? "분석에 실패했습니다.");
+      }
+
+      const extracted = data as ExtractedConditions;
+      console.log("[AI 추출 조건]", extracted);
+      setExtractedConditions(extracted);
+      applyRecommendation(extracted);
+    } catch (error) {
+      setRankedCourses([]);
+      setUnsupportedSourceText(null);
+      setMissingDongMessage(false);
+      setAnalyzeError(error instanceof Error ? error.message : "분석에 실패했습니다.");
+    } finally {
+      setIsAnalyzing(false);
+    }
+  }
+
+  // [ㅇㅇ동으로 추천 받기] 버튼
+  function handleRecommendWithSelected() {
+    if (!dong || !extractedConditions) return;
+    runRecommendation(extractedConditions, dong);
+  }
+
+  // [다시 입력하기] 버튼
+  function handleRetryInput() {
+    setUnsupportedSourceText(null);
+  }
 
   return (
     <div className="font-body-md text-on-surface bg-background">
@@ -77,74 +121,82 @@ export default function DiscoveryPage() {
         <header className="sticky top-0 z-50 bg-surface shadow-sm px-margin py-sm flex items-center">
           <div className="flex items-center gap-2 text-h2 font-h2 text-primary">
             <span className="material-symbols-outlined">explore</span>
-            탐색
+            AI 산책로 추천
           </div>
         </header>
 
-        <main className="px-margin pt-md pb-xl flex flex-col gap-md">
-          <div className="flex gap-xs overflow-x-auto pb-1 -mx-margin px-margin">
-            {FILTER_OPTIONS.map((option) => {
-              const active = activeFilter === option;
-              return (
-                <button
-                  key={option}
-                  type="button"
-                  onClick={() => setActiveFilter(option)}
-                  className={filterChipClass(active)}
-                >
-                  {option}
-                </button>
-              );
-            })}
-          </div>
+        <main className="px-margin pt-md pb-xl flex flex-col gap-lg">
+          <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            현재 GPS 기반 위치 추천을 지원하지 않습니다.
+            <br />
+            산책할 동을 선택한 뒤 원하는 산책 조건을 입력해 주세요.
+          </p>
 
-          {filteredVideos.length === 0 ? (
-            <p className="font-body-md text-body-md text-on-surface-variant text-center py-lg">
-              해당 카테고리의 영상이 없어요.
+          <DongSelector />
+
+          <section className="flex flex-col gap-sm">
+            <h3 className="text-h3 font-h3 text-on-surface">어떤 산책을 원하시나요?</h3>
+            <textarea
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="예: 30분 정도 평탄한 공원 산책로를 찾아줘. 화장실도 있으면 좋겠어."
+              rows={4}
+              className="w-full resize-none rounded-lg px-md py-sm text-body-lg font-body-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-primary/30"
+              style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+            />
+          </section>
+
+          <button
+            type="button"
+            disabled={!query.trim() || !weatherData || isAnalyzing}
+            onClick={handleRecommend}
+            className="w-full rounded-lg bg-primary text-on-primary font-body-lg text-body-lg py-sm disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] transition-transform"
+            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+          >
+            {isAnalyzing ? "분석 중..." : "추천 받기"}
+          </button>
+
+          {analyzeError && (
+            <p className="font-body-md text-body-md text-error text-center">
+              {analyzeError}
             </p>
-          ) : (
-            <ul className="flex flex-col gap-md list-none p-0 m-0">
-              {filteredVideos.map((video) => (
-                <li key={video.id}>
-                  <VideoCard video={video} />
-                </li>
-              ))}
-            </ul>
           )}
+
+          {unsupportedSourceText && (
+            <UnsupportedDongNotice
+              sourceText={unsupportedSourceText}
+              selectedDong={dong}
+              onRecommendWithSelected={handleRecommendWithSelected}
+              onRetryInput={handleRetryInput}
+            />
+          )}
+
+          <section className="flex flex-col gap-md">
+            <h2 className="font-h3 text-h3 text-on-surface">추천 결과</h2>
+            {missingDongMessage ? (
+              <p className="font-body-md text-body-md text-on-surface-variant text-center py-lg">
+                동을 선택하거나 입력해 주세요.
+              </p>
+            ) : rankedCourses.length > 0 && weatherData ? (
+              <>
+                <p className="font-body-md text-body-md text-on-surface">
+                  {rankedCourses.length}개의 코스를 찾았어요
+                </p>
+                <div className="flex flex-col gap-md">
+                  {rankedCourses.map((course) => (
+                    <CourseCard key={course.id} course={course} pollen={weatherData.pollen} />
+                  ))}
+                </div>
+              </>
+            ) : unsupportedSourceText ? null : (
+              <p className="font-body-md text-body-md text-on-surface-variant text-center py-lg">
+                산책 조건을 입력한 뒤 추천 받기를 눌러 주세요.
+              </p>
+            )}
+          </section>
         </main>
 
-        <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface shadow-[0_-2px_8px_rgba(0,0,0,0.06)] flex justify-around items-center px-4 pb-4 pt-2 font-label-sm text-label-sm max-w-[390px] mx-auto right-0">
-          {NAV_TABS.map(({ icon, label, href, active }) =>
-            href === "#" ? (
-              <button
-                key={label}
-                type="button"
-                className="flex flex-col items-center gap-0.5 text-secondary p-2"
-              >
-                <span className="material-symbols-outlined text-[24px]">{icon}</span>
-                {label}
-              </button>
-            ) : (
-              <Link
-                key={label}
-                href={href}
-                className={
-                  active
-                    ? "flex flex-col items-center gap-0.5 bg-secondary-container text-primary rounded-full px-4 py-1"
-                    : "flex flex-col items-center gap-0.5 text-secondary p-2"
-                }
-              >
-                <span
-                  className="material-symbols-outlined text-[24px]"
-                  style={active ? { fontVariationSettings: "'FILL' 1" } : undefined}
-                >
-                  {icon}
-                </span>
-                {label}
-              </Link>
-            ),
-          )}
-        </nav>
+        <BottomNav />
       </div>
     </div>
   );

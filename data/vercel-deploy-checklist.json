@@ -1,0 +1,178 @@
+{
+  "project": "today-path",
+  "platform": "vercel",
+  "lastUpdated": "2026-07-31",
+  "dataFiles": [
+    {
+      "path": "data/courses.json",
+      "description": "산책 코스 마스터 데이터 (24코스, 9동)",
+      "editable": true,
+      "requiresRedeploy": true
+    },
+    {
+      "path": "data/supported-dongs.json",
+      "description": "지원 동 목록 (UI·AI 프롬프트·필터 공통)",
+      "editable": true,
+      "requiresRedeploy": true
+    },
+    {
+      "path": "data/mock-weather.json",
+      "description": "날씨 API 실패 시 폴백 + 꽃가루 기본값",
+      "editable": true,
+      "requiresRedeploy": true
+    }
+  ],
+  "environmentVariables": [
+    {
+      "key": "OPENAI_API_KEY",
+      "required": true,
+      "scope": "server",
+      "description": "AI 산책 조건 분석 (/api/analyze). 없으면 discovery 추천 실패",
+      "whereToGet": "https://platform.openai.com/api-keys"
+    },
+    {
+      "key": "OPENAI_MODEL",
+      "required": false,
+      "scope": "server",
+      "default": "gpt-4o-mini",
+      "description": "OpenAI 모델 이름"
+    },
+    {
+      "key": "KMA_API_KEY",
+      "required": false,
+      "scope": "server",
+      "description": "기상청 단기예보. 없으면 mock-weather.json 날씨값 사용",
+      "whereToGet": "https://www.data.go.kr (기상청_단기예보 조회서비스)"
+    },
+    {
+      "key": "AIR_KOREA_API_KEY",
+      "required": false,
+      "scope": "server",
+      "description": "에어코리아 미세먼지. 없으면 mock-weather.json 대기값 사용",
+      "whereToGet": "https://www.data.go.kr (한국환경공단_에어코리아)"
+    },
+    {
+      "key": "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY",
+      "required": true,
+      "scope": "client",
+      "description": "코스 상세 지도 (Maps JavaScript API)",
+      "whereToGet": "https://console.cloud.google.com/google/maps-apis"
+    },
+    {
+      "key": "NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID",
+      "required": false,
+      "scope": "client",
+      "default": "DEMO_MAP_ID",
+      "description": "Google Maps Map ID (Advanced Markers)"
+    }
+  ],
+  "preDeploySteps": [
+    {
+      "id": "git-push",
+      "title": "Git 저장소 연결",
+      "description": "main 브랜치에 최신 코드 push",
+      "done": false
+    },
+    {
+      "id": "env-openai",
+      "title": "OPENAI_API_KEY 설정",
+      "description": "Vercel Project Settings → Environment Variables",
+      "done": false
+    },
+    {
+      "id": "env-maps",
+      "title": "Google Maps 키 설정",
+      "description": "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY (Production·Preview·Development 모두)",
+      "done": false
+    },
+    {
+      "id": "env-weather",
+      "title": "날씨 API 키 설정 (선택)",
+      "description": "KMA_API_KEY, AIR_KOREA_API_KEY — 없으면 목업 폴백",
+      "done": false
+    },
+    {
+      "id": "maps-restrict",
+      "title": "Maps API 키 제한 설정",
+      "description": "HTTP referrer에 배포 도메인 추가 (예: https://your-app.vercel.app/*)",
+      "done": false
+    }
+  ],
+  "deploySteps": [
+    {
+      "id": "import-vercel",
+      "title": "Vercel에서 Import",
+      "description": "New Project → GitHub repo 선택 → Framework Preset: Next.js"
+    },
+    {
+      "id": "build-settings",
+      "title": "빌드 설정 확인",
+      "description": "Build Command: next build, Output: default, Install: npm install"
+    },
+    {
+      "id": "deploy",
+      "title": "Deploy",
+      "description": "첫 배포 후 Production URL 확인"
+    }
+  ],
+  "postDeployVerification": [
+    {
+      "id": "home",
+      "route": "/",
+      "title": "홈 — 동 선택 후 코스 목록",
+      "expected": "CourseCard 목록 표시"
+    },
+    {
+      "id": "weather",
+      "route": "/api/weather",
+      "title": "날씨 API",
+      "expected": "JSON에 weather, air, pollen 필드"
+    },
+    {
+      "id": "discovery",
+      "route": "/discovery",
+      "title": "AI 추천",
+      "expected": "동 선택 + 질문 입력 → 추천 받기 → 코스 출력"
+    },
+    {
+      "id": "course-detail",
+      "route": "/course/course-1-01",
+      "title": "코스 상세 지도",
+      "expected": "Google Maps 로드, polyline 표시"
+    },
+    {
+      "id": "my-routes",
+      "route": "/my-routes",
+      "title": "내 산책로",
+      "expected": "최근/즐겨찾기 탭 (localStorage)"
+    }
+  ],
+  "knownLimitations": [
+    "꽃가루 데이터는 mock-weather.json 고정값 (실시간 API 미연동)",
+    "코스 데이터 변경 시 JSON 수정 후 재배포 필요",
+    "즐겨찾기·최근 코스는 브라우저 localStorage (기기별)",
+    "GPS 기반 위치 추천 미지원"
+  ],
+  "troubleshooting": [
+    {
+      "symptom": "discovery에서 '분석에 실패했습니다'",
+      "cause": "OPENAI_API_KEY 미설정 또는 잘못된 키",
+      "fix": "Vercel env 확인 후 Redeploy"
+    },
+    {
+      "symptom": "지도가 안 뜸",
+      "cause": "Maps API 키·referrer 제한·Billing",
+      "fix": "Google Cloud Console에서 Maps JavaScript API 활성화 및 referrer 추가"
+    },
+    {
+      "symptom": "날씨가 항상 같음",
+      "cause": "KMA/AIR API 키 없음 또는 호출 실패 → 목업 폴백",
+      "fix": "API 키 설정, data.go.kr 서비스 승인 확인"
+    },
+    {
+      "symptom": "추천 결과 0개",
+      "cause": "동 미선택 또는 조건이 너무 엄격",
+      "fix": "supported-dongs.json 동과 courses.json dong 필드 일치 확인"
+    }
+  ]
+}
