@@ -5,6 +5,7 @@ import WeatherBox from "@/components/WeatherBox";
 import DongSelector from "@/components/DongSelector";
 import FilterPanel from "@/components/FilterPanel";
 import CourseCard from "@/components/CourseCard";
+import CoursesStartMap from "@/components/CoursesStartMap";
 import BottomNav from "@/components/BottomNav";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterCourses } from "@/lib/filterCourses";
@@ -136,15 +137,18 @@ export default function HomePage() {
                   조건에 맞는 코스가 없어요. 필터를 조정해보세요.
                 </p>
               ) : (
-                <div className="flex flex-col gap-md">
-                  {rankedCourses.map((course) => (
-                    <CourseCard
-                      key={course.id}
-                      course={course}
-                      pollen={weatherData.pollen}
-                    />
-                  ))}
-                </div>
+                <>
+                  <CoursesStartMap courses={rankedCourses} />
+                  <div className="flex flex-col gap-md">
+                    {rankedCourses.map((course) => (
+                      <CourseCard
+                        key={course.id}
+                        course={course}
+                        pollen={weatherData.pollen}
+                      />
+                    ))}
+                  </div>
+                </>
               )}
             </section>
           )}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useFilterStore } from "@/store/useFilterStore";
-import { Theme } from "@/types/index";
+import { THEME_CHIPS } from "@/lib/themeLabels";
 
 interface Chip<T> {
   label: string;
@@ -12,13 +12,6 @@ const DURATION_CHIPS: Chip<30 | 60 | 999>[] = [
   { label: "30분 이내", value: 30 },
   { label: "1시간 이내", value: 60 },
   { label: "1시간 이상", value: 999 },
-];
-
-const THEME_CHIPS: Chip<Theme>[] = [
-  { label: "공원", value: "park" },
-  { label: "수변", value: "lake" },
-  { label: "숲·자연", value: "forest" },
-  { label: "수변길", value: "stream" },
 ];
 
 const WEIGHT_CHIPS: { label: string; key: "flatPriority" | "coolPriority" | "toiletPriority" | "naturePriority" }[] = [

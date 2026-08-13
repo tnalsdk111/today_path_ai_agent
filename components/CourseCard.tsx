@@ -5,18 +5,12 @@ import Link from "next/link";
 import { Course, WeatherData } from "@/types/index";
 import { hasPollenWarning } from "@/lib/pollenWarning";
 import { isFavorite, toggleFavorite } from "@/lib/localStorage";
+import { THEME_LABEL } from "@/lib/themeLabels";
 
 interface CourseCardProps {
   course: Course;
   pollen: WeatherData["pollen"];
 }
-
-const THEME_LABEL: Record<Course["themes"][number], string> = {
-  park: "공원",
-  lake: "수변",
-  forest: "숲·자연",
-  stream: "수변길",
-};
 
 const DIFFICULTY_LABEL: Record<Course["difficulty"], string> = {
   flat: "평탄",
