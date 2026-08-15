@@ -27,7 +27,7 @@
       "key": "OPENAI_API_KEY",
       "required": true,
       "scope": "server",
-      "description": "AI 산책 조건 분석 (/api/analyze). 없으면 discovery 추천 실패",
+      "description": "discovery 산책 조건 분석 (/api/analyze). 없으면 discovery 추천 실패",
       "whereToGet": "https://platform.openai.com/api-keys"
     },
     {
@@ -35,7 +35,21 @@
       "required": false,
       "scope": "server",
       "default": "gpt-4o-mini",
-      "description": "OpenAI 모델 이름"
+      "description": "OpenAI 모델 이름 (discovery /api/analyze)"
+    },
+    {
+      "key": "ANTHROPIC_API_KEY",
+      "required": true,
+      "scope": "server",
+      "description": "에이전트 산책 조건 분석 (/api/agent/recommend 2단계). 없으면 에이전트 추천 실패",
+      "whereToGet": "https://console.anthropic.com/settings/keys"
+    },
+    {
+      "key": "ANTHROPIC_MODEL",
+      "required": false,
+      "scope": "server",
+      "default": "claude-sonnet-4-5",
+      "description": "Anthropic 모델 이름 (agent)"
     },
     {
       "key": "KMA_API_KEY",
@@ -76,7 +90,13 @@
     {
       "id": "env-openai",
       "title": "OPENAI_API_KEY 설정",
-      "description": "Vercel Project Settings → Environment Variables",
+      "description": "Vercel Project Settings → Environment Variables (discovery)",
+      "done": false
+    },
+    {
+      "id": "env-anthropic",
+      "title": "ANTHROPIC_API_KEY 설정",
+      "description": "Vercel Project Settings → Environment Variables (agent)",
       "done": false
     },
     {
@@ -158,6 +178,11 @@
       "symptom": "discovery에서 '분석에 실패했습니다'",
       "cause": "OPENAI_API_KEY 미설정 또는 잘못된 키",
       "fix": "Vercel env 확인 후 Redeploy"
+    },
+    {
+      "symptom": "에이전트 2단계 추천 실패",
+      "cause": "ANTHROPIC_API_KEY 미설정 또는 잘못된 키",
+      "fix": "Vercel env에 ANTHROPIC_API_KEY 설정 후 Redeploy"
     },
     {
       "symptom": "지도가 안 뜸",

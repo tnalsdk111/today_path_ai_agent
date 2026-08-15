@@ -2,8 +2,8 @@ import { MOCK_EXTRACTED_CONDITIONS } from "@/lib/mockExtractedConditions";
 import { SUPPORTED_DONGS } from "@/lib/supportedDongs";
 
 /**
- * GPT 시스템 프롬프트.
- * 분석 규칙·예시를 여기서 수정하면 됩니다.
+ * 자연어 조건 분석 시스템 프롬프트.
+ * discovery(OpenAI)·agent(Claude)가 공유한다.
  */
 export function buildAnalyzeQuerySystemPrompt(): string {
   return `당신은 용인시 수지구 산책로 추천 앱의 자연어 분석기입니다.

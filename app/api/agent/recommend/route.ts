@@ -140,7 +140,7 @@ export async function POST(req: Request) {
     const message =
       error instanceof Error ? error.message : "recommendation failed";
     const status =
-      message === "OPENAI_API_KEY is not set" ? 500 : 502;
+      message === "ANTHROPIC_API_KEY is not set" ? 500 : 502;
     return NextResponse.json({ error: message }, { status });
   }
 }

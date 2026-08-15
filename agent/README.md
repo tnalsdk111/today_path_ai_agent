@@ -23,7 +23,7 @@ POST /api/agent/recommend
 { "dong": "풍덕천1동" }
 ```
 
-OpenAI 호출 없음.
+LLM 호출 없음.
 
 ### 2단계 — 추가 조건 추천
 
@@ -35,7 +35,8 @@ POST /api/agent/recommend
 }
 ```
 
-`OPENAI_API_KEY` 필요.
+`ANTHROPIC_API_KEY` 필요. Claude가 조건을 분석한다 (`lib/analyzeNaturalLanguageQueryClaude.ts`).
+탐색 탭(`/api/analyze`)은 기존처럼 `OPENAI_API_KEY`를 쓴다.
 
 ## 구조
 

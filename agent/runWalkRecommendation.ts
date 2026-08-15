@@ -1,5 +1,5 @@
 import { formatRecommendationMessage } from "@/agent/formatRecommendationMessage";
-import { analyzeNaturalLanguageQuery } from "@/lib/analyzeNaturalLanguageQuery";
+import { analyzeNaturalLanguageQueryClaude } from "@/lib/analyzeNaturalLanguageQueryClaude";
 import { MOCK_WEATHER } from "@/lib/mockWeather";
 import { rankAiRecommendedCourses } from "@/lib/rankAiRecommendedCourses";
 import { resolveDong } from "@/lib/resolveDong";
@@ -57,7 +57,7 @@ export async function runWalkRecommendation(
     };
   }
 
-  const extracted = await analyzeNaturalLanguageQuery(query);
+  const extracted = await analyzeNaturalLanguageQueryClaude(query);
   const resolution = resolveDong(extracted.dong, selectedDong);
 
   if (resolution.status === "unsupported") {
