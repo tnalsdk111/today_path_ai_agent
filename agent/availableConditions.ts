@@ -9,7 +9,7 @@ export const AVAILABLE_WALK_CONDITIONS = [
   "자연적인 길",
   "야간에도 안전한 길",
   "공원 테마",
-  "수변 테마",
+  "호수 테마",
   "숲·자연 테마",
-  "수변길 테마",
+  "하천 테마",
 ] as const;

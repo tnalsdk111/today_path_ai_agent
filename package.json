@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "agent:chat": "node scripts/agent-chat.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.117.1",
     "next": "14.2.35",
     "openai": "^7.1.0",
     "react": "^18",

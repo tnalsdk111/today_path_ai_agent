@@ -23,7 +23,7 @@ POST /api/agent/recommend
 { "dong": "풍덕천1동" }
 ```
 
-OpenAI 호출 없음.
+LLM 호출 없음.
 
 ### 2단계 — 추가 조건 추천
 
@@ -35,7 +35,8 @@ POST /api/agent/recommend
 }
 ```
 
-`OPENAI_API_KEY` 필요.
+`ANTHROPIC_API_KEY` 필요. Claude가 조건을 분석한다 (`lib/analyzeNaturalLanguageQueryClaude.ts`).
+탐색 탭(`/api/analyze`)은 기존처럼 `OPENAI_API_KEY`를 쓴다.
 
 ## 구조
 
@@ -48,6 +49,46 @@ agent/
   formatRecommendationMessage.ts
   runWalkRecommendation.ts    # 2단계 진입점
 ```
+
+## 로컬 콘솔 테스트
+
+웹 UI 없이 `npm run dev`로 띄운 로컬 API를 호출하면 됩니다. Vercel/main 배포가 필요 없습니다.
+
+터미널 하나에서:
+
+```bash
+npm run dev
+```
+
+다른 터미널에서:
+
+```bash
+npm run agent:chat
+```
+
+```
+you> 풍덕천1동
+agent [success]
+...해당 동 산책로 목록...
+
+you> 30분 이내 시원한 길
+agent [success]
+...Claude 조건 분석 후 추천...
+```
+
+한 번만 치려면 PowerShell에서:
+
+```powershell
+Invoke-RestMethod -Method Post -Uri http://localhost:3000/api/agent/recommend `
+  -ContentType "application/json; charset=utf-8" `
+  -Body '{"dong":"풍덕천1동"}'
+
+Invoke-RestMethod -Method Post -Uri http://localhost:3000/api/agent/recommend `
+  -ContentType "application/json; charset=utf-8" `
+  -Body '{"dong":"풍덕천1동","query":"30분 이내 시원한 길"}'
+```
+
+2단계 추천에는 `.env.local`의 `ANTHROPIC_API_KEY`가 필요합니다.
 
 ## 데이터
 

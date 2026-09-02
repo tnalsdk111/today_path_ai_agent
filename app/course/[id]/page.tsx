@@ -9,13 +9,7 @@ import { Course, WeatherData } from "@/types/index";
 import coursesData from "@/data/courses.json";
 import { MOCK_WEATHER } from "@/lib/mockWeather";
 import { addRecentCourse } from "@/lib/localStorage";
-
-const THEME_LABEL: Record<Course["themes"][number], string> = {
-  park: "공원",
-  lake: "수변",
-  forest: "숲·자연",
-  stream: "수변길",
-};
+import { THEME_LABEL } from "@/lib/themeLabels";
 
 const DIFFICULTY_LABEL: Record<Course["difficulty"], string> = {
   flat: "평탄",

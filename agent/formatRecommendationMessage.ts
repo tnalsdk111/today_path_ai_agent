@@ -1,15 +1,9 @@
 import courseSummaries from "@/data/course-summaries.json";
 import type { ExtractedConditions, ConditionStrength } from "@/types/ai";
-import type { Course, Theme } from "@/types/index";
+import type { Course } from "@/types/index";
+import { THEME_LABEL } from "@/lib/themeLabels";
 
 const summaries = courseSummaries as Record<string, string>;
-
-const THEME_LABEL: Record<Theme, string> = {
-  park: "공원",
-  lake: "수변",
-  forest: "숲·자연",
-  stream: "수변길",
-};
 
 function isActive(strength: ConditionStrength): boolean {
   return strength === "required" || strength === "preferred";

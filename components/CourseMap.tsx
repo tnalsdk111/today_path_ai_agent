@@ -3,44 +3,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Course } from "@/types/index";
+import { loadGoogleMaps } from "@/lib/loadGoogleMaps";
 
 interface CourseMapProps {
   course: Course;
   showToilets: boolean;
   showParkEntrances: boolean;
-}
-
-declare global {
-  interface Window {
-    google?: typeof google;
-    __googleMapsLoaded?: boolean;
-    __googleMapsCallbacks?: Array<() => void>;
-  }
-}
-
-function loadGoogleMaps(apiKey: string): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.google?.maps?.geometry) {
-      resolve();
-      return;
-    }
-    if (!window.__googleMapsCallbacks) {
-      window.__googleMapsCallbacks = [];
-    }
-    window.__googleMapsCallbacks.push(resolve);
-    if (window.__googleMapsLoaded) return;
-    window.__googleMapsLoaded = true;
-
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry,marker&callback=__googleMapsReady`;
-    script.async = true;
-    script.defer = true;
-    (window as unknown as Record<string, unknown>)["__googleMapsReady"] = () => {
-      window.__googleMapsCallbacks?.forEach((cb) => cb());
-      window.__googleMapsCallbacks = [];
-    };
-    document.head.appendChild(script);
-  });
 }
 
 export default function CourseMap({
