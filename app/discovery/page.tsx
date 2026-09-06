@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DongSelector from "@/components/DongSelector";
 import BottomNav from "@/components/BottomNav";
 import CourseCard from "@/components/CourseCard";
+import CoursesStartMap from "@/components/CoursesStartMap";
 import UnsupportedDongNotice from "@/components/UnsupportedDongNotice";
 import { rankAiRecommendedCourses } from "@/lib/rankAiRecommendedCourses";
 import { resolveDong } from "@/lib/resolveDong";
@@ -186,6 +187,7 @@ export default function DiscoveryPage() {
                 <p className="font-body-md text-body-md text-on-surface">
                   {rankedCourses.length}개의 코스를 찾았어요
                 </p>
+                <CoursesStartMap courses={rankedCourses} />
                 <div className="flex flex-col gap-md">
                   {rankedCourses.map((course) => (
                     <CourseCard key={course.id} course={course} pollen={weatherData?.pollen} />

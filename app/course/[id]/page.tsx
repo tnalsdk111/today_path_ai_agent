@@ -67,8 +67,9 @@ export default function CoursePage() {
   const pollen = weatherData?.pollen;
 
   function handleKakaoMap() {
-    const encodedName = encodeURIComponent(course!.name);
-    const url = `https://map.kakao.com/link/to/${encodedName},${course!.start_point.lat},${course!.start_point.lng}`;
+    const { lat, lng } = course!.start_point;
+    const label = encodeURIComponent("산책 출발점");
+    const url = `https://map.kakao.com/link/to/${label},${lat},${lng}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
