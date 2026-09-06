@@ -3,7 +3,7 @@ import { hasPollenWarning } from "@/lib/pollenWarning";
 
 interface VegetationPanelProps {
   course: Course;
-  pollen: WeatherData["pollen"];
+  pollen?: WeatherData["pollen"];
 }
 
 const TAG_CONFIG: Record<string, { label: string; pollen: boolean }> = {
@@ -16,7 +16,7 @@ const TAG_CONFIG: Record<string, { label: string; pollen: boolean }> = {
 };
 
 export default function VegetationPanel({ course, pollen }: VegetationPanelProps) {
-  const showWarningBanner = hasPollenWarning(course, pollen);
+  const showWarningBanner = pollen ? hasPollenWarning(course, pollen) : false;
   const tags = course.vegetation.tags.filter((t) => t in TAG_CONFIG);
 
   return (

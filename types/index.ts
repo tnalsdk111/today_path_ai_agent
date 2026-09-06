@@ -7,8 +7,14 @@ export type PollenTag = "pine" | "birch" | "grass" | "oak" | "meta" | "bamboo";
 // 대기질 등급
 export type AirGrade = "좋음" | "보통" | "나쁨" | "매우나쁨";
 
-// 꽃가루 농도 수준
-export type PollenLevel = "없음" | "낮음" | "보통" | "높음";
+// 꽃가루 농도 수준 (기상청 지수)
+export type PollenLevel = "낮음" | "보통" | "높음" | "매우높음";
+
+/** 기상청에서 받은 값 / 시즌 외 / 포털 연결 실패 */
+export type PollenReading =
+  | { status: "ok"; level: PollenLevel }
+  | { status: "off_season" }
+  | { status: "unavailable" };
 
 // 시설 위치 정보
 export interface Facility {
@@ -80,9 +86,9 @@ export interface WeatherData {
     pm25_grade: AirGrade;
   };
   pollen: {
-    pine: PollenLevel;
-    birch: PollenLevel;
-    grass: PollenLevel;
+    pine: PollenReading;
+    oak: PollenReading;
+    grass: PollenReading;
   };
 }
 

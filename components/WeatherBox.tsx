@@ -1,4 +1,5 @@
-import { WeatherData, AirGrade, PollenLevel } from "@/types/index";
+import type { ReactNode } from "react";
+import { WeatherData, AirGrade, PollenLevel, PollenReading } from "@/types/index";
 
 interface WeatherBoxProps {
   data: WeatherData;
@@ -45,11 +46,22 @@ function airGradeDotClass(grade: AirGrade): string {
 
 function pollenLevelClass(level: PollenLevel): string {
   switch (level) {
+    case "매우높음":
     case "높음": return "text-orange-600";
     case "보통": return "text-yellow-600";
-    case "낮음":
-    case "없음": return "text-on-surface-variant";
+    case "낮음": return "text-on-surface-variant";
   }
+}
+
+function pollenReadingLabel(reading: PollenReading): string {
+  if (reading.status === "ok") return reading.level;
+  if (reading.status === "off_season") return "시즌 외";
+  return "불러오지 못함";
+}
+
+function pollenReadingClass(reading: PollenReading): string {
+  if (reading.status === "ok") return pollenLevelClass(reading.level);
+  return "text-on-surface-variant";
 }
 
 function alertMessage(data: WeatherData): string | null {
@@ -59,27 +71,60 @@ function alertMessage(data: WeatherData): string | null {
   if (data.air.pm10_grade === "나쁨" || data.air.pm10_grade === "매우나쁨") {
     return "오늘은 미세먼지가 나쁩니다. 마스크를 착용하세요.";
   }
-  const pollenNames: Record<"pine" | "birch" | "grass", string> = {
+  const pollenNames: Record<"pine" | "oak" | "grass", string> = {
     pine: "소나무",
-    birch: "자작나무",
-    grass: "풀류",
+    oak: "참나무",
+    grass: "잡초류",
   };
-  for (const key of ["pine", "birch", "grass"] as const) {
-    if (data.pollen[key] === "높음") {
+  for (const key of ["pine", "oak", "grass"] as const) {
+    if (data.pollen[key].status === "ok" &&
+        (data.pollen[key].level === "높음" || data.pollen[key].level === "매우높음")) {
       return `오늘은 ${pollenNames[key]} 꽃가루가 많아요. 마스크를 챙기세요.`;
     }
   }
   return null;
 }
 
+function WeatherBoxFrame({ children }: { children: ReactNode }) {
+  return (
+    <div
+      className="bg-surface-container-lowest rounded-xl p-md flex flex-col gap-md min-h-[160px]"
+      style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function WeatherBoxLoading() {
+  return (
+    <WeatherBoxFrame>
+      <div className="flex-1 flex items-center justify-center">
+        <span className="text-on-surface-variant font-body-md text-body-md">
+          날씨 로드 중입니다
+        </span>
+      </div>
+    </WeatherBoxFrame>
+  );
+}
+
+export function WeatherBoxError() {
+  return (
+    <WeatherBoxFrame>
+      <div className="flex-1 flex items-center justify-center">
+        <span className="text-on-surface-variant font-body-md text-body-md">
+          날씨를 불러오지 못했어요
+        </span>
+      </div>
+    </WeatherBoxFrame>
+  );
+}
+
 export default function WeatherBox({ data }: WeatherBoxProps) {
   const alert = alertMessage(data);
 
   return (
-    <div
-      className="bg-surface-container-lowest rounded-xl p-md flex flex-col gap-md"
-      style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-    >
+    <WeatherBoxFrame>
       {/* 상단 행 */}
       <div className="flex justify-between items-start">
         {/* 왼쪽: 아이콘 + 기온 + 날씨 상태 */}
@@ -130,8 +175,8 @@ export default function WeatherBox({ data }: WeatherBoxProps) {
           {(
             [
               { key: "pine", label: "소나무" },
-              { key: "birch", label: "자작나무" },
-              { key: "grass", label: "풀류" },
+              { key: "oak", label: "참나무" },
+              { key: "grass", label: "잡초류" },
             ] as const
           ).map(({ key, label }, idx) => (
             <div key={key} className="flex flex-1">
@@ -143,9 +188,9 @@ export default function WeatherBox({ data }: WeatherBoxProps) {
                   {label}
                 </span>
                 <span
-                  className={`font-label-sm text-label-sm font-semibold ${pollenLevelClass(data.pollen[key])}`}
+                  className={`font-label-sm text-label-sm font-semibold ${pollenReadingClass(data.pollen[key])}`}
                 >
-                  {data.pollen[key]}
+                  {pollenReadingLabel(data.pollen[key])}
                 </span>
               </div>
             </div>
@@ -165,6 +210,6 @@ export default function WeatherBox({ data }: WeatherBoxProps) {
           <p className="font-body-md text-body-md text-orange-800">{alert}</p>
         </div>
       )}
-    </div>
+    </WeatherBoxFrame>
   );
 }

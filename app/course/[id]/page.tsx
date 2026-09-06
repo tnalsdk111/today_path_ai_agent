@@ -7,7 +7,6 @@ import EnvIndicatorPanel from "@/components/EnvIndicatorPanel";
 import VegetationPanel from "@/components/VegetationPanel";
 import { Course, WeatherData } from "@/types/index";
 import coursesData from "@/data/courses.json";
-import { MOCK_WEATHER } from "@/lib/mockWeather";
 import { addRecentCourse } from "@/lib/localStorage";
 import { THEME_LABEL } from "@/lib/themeLabels";
 
@@ -42,7 +41,7 @@ export default function CoursePage() {
         return res.json();
       })
       .then((data: WeatherData) => setWeatherData(data))
-      .catch(() => setWeatherData(MOCK_WEATHER));
+      .catch(() => setWeatherData(null));
   }, []);
 
   const course = (coursesData as Course[]).find((c) => c.id === id);
@@ -65,7 +64,7 @@ export default function CoursePage() {
     );
   }
 
-  const pollen = weatherData?.pollen ?? MOCK_WEATHER.pollen;
+  const pollen = weatherData?.pollen;
 
   function handleKakaoMap() {
     const encodedName = encodeURIComponent(course!.name);

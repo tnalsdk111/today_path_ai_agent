@@ -14,7 +14,7 @@ const courses = coursesData as Course[];
 export function rankAiRecommendedCourses(
   extracted: ExtractedConditions,
   finalDong: string,
-  weatherData: WeatherData,
+  weatherData?: WeatherData | null,
 ): Course[] {
   const converted = convertExtractedConditions(extracted);
   const { filterOptions, weights } = buildRecommendationParams(
@@ -22,7 +22,7 @@ export function rankAiRecommendedCourses(
     finalDong,
   );
 
-  const safeCourses = weatherData.weather.is_raining
+  const safeCourses = weatherData?.weather.is_raining
     ? courses.filter((course) => !course.flood_risk)
     : courses;
 
