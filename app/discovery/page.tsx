@@ -7,7 +7,6 @@ import CourseCard from "@/components/CourseCard";
 import UnsupportedDongNotice from "@/components/UnsupportedDongNotice";
 import { rankAiRecommendedCourses } from "@/lib/rankAiRecommendedCourses";
 import { resolveDong } from "@/lib/resolveDong";
-import { MOCK_WEATHER } from "@/lib/mockWeather";
 import { useAiStore } from "@/store/useAiStore";
 import { useFilterStore } from "@/store/useFilterStore";
 import type { ExtractedConditions } from "@/types/ai";
@@ -40,12 +39,12 @@ export default function DiscoveryPage() {
         return data as WeatherData;
       })
       .then((data) => setWeatherData(data))
-      .catch(() => setWeatherData(MOCK_WEATHER));
+      .catch(() => setWeatherData(null));
   }, []);
 
   // 추천 실행 - finalDong과 분석 결과로 코스를 계산한다.
   function runRecommendation(extracted: typeof extractedConditions, finalDong: string) {
-    if (!extracted || !weatherData) return;
+    if (!extracted) return;
 
     const courses = rankAiRecommendedCourses(extracted, finalDong, weatherData);
     setRankedCourses(courses);
@@ -115,6 +114,11 @@ export default function DiscoveryPage() {
     setUnsupportedSourceText(null);
   }
 
+  useEffect(() => {
+    if (!extractedConditions || rankedCourses.length === 0) return;
+    applyRecommendation(extractedConditions);
+  }, [weatherData]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <div className="font-body-md text-on-surface bg-background">
       <div className="max-w-[390px] mx-auto relative min-h-screen pb-24">
@@ -148,7 +152,7 @@ export default function DiscoveryPage() {
 
           <button
             type="button"
-            disabled={!query.trim() || !weatherData || isAnalyzing}
+            disabled={!query.trim() || isAnalyzing}
             onClick={handleRecommend}
             className="w-full rounded-lg bg-primary text-on-primary font-body-lg text-body-lg py-sm disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98] transition-transform"
             style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
@@ -177,14 +181,14 @@ export default function DiscoveryPage() {
               <p className="font-body-md text-body-md text-on-surface-variant text-center py-lg">
                 동을 선택하거나 입력해 주세요.
               </p>
-            ) : rankedCourses.length > 0 && weatherData ? (
+            ) : rankedCourses.length > 0 ? (
               <>
                 <p className="font-body-md text-body-md text-on-surface">
                   {rankedCourses.length}개의 코스를 찾았어요
                 </p>
                 <div className="flex flex-col gap-md">
                   {rankedCourses.map((course) => (
-                    <CourseCard key={course.id} course={course} pollen={weatherData.pollen} />
+                    <CourseCard key={course.id} course={course} pollen={weatherData?.pollen} />
                   ))}
                 </div>
               </>

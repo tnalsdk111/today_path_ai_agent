@@ -1,11 +1,11 @@
 import { formatRecommendationMessage } from "@/agent/formatRecommendationMessage";
 import { analyzeNaturalLanguageQueryClaude } from "@/lib/analyzeNaturalLanguageQueryClaude";
-import { MOCK_WEATHER } from "@/lib/mockWeather";
+import { getWeatherData } from "@/lib/getWeatherData";
 import { rankAiRecommendedCourses } from "@/lib/rankAiRecommendedCourses";
 import { resolveDong } from "@/lib/resolveDong";
 import { isSupportedDong } from "@/lib/supportedDongs";
 import type { ExtractedConditions } from "@/types/ai";
-import type { Course, WeatherData } from "@/types/index";
+import type { Course } from "@/types/index";
 
 export type WalkRecommendationResult =
   | {
@@ -25,22 +25,6 @@ export type WalkRecommendationResult =
       message: string;
     };
 
-async function fetchWeatherData(): Promise<WeatherData> {
-  try {
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/weather`, { cache: "no-store" });
-    if (!res.ok) throw new Error("weather fetch failed");
-    const data = await res.json();
-    if (!data?.weather) throw new Error("invalid weather response");
-    return data as WeatherData;
-  } catch {
-    return MOCK_WEATHER;
-  }
-}
-
 /**
  * 2단계: 동이 정해진 뒤 추가 조건(자연어)으로 코스를 추천한다.
  * selectedDong은 1단계에서 사용자가 클릭한 동이다.
@@ -57,6 +41,7 @@ export async function runWalkRecommendation(
     };
   }
 
+  const weatherPromise = getWeatherData().catch(() => null);
   const extracted = await analyzeNaturalLanguageQueryClaude(query);
   const resolution = resolveDong(extracted.dong, selectedDong);
 
@@ -80,7 +65,7 @@ export async function runWalkRecommendation(
   }
 
   const finalDong = resolution.dong;
-  const weatherData = await fetchWeatherData();
+  const weatherData = await weatherPromise;
   const courses = rankAiRecommendedCourses(
     extracted,
     finalDong,

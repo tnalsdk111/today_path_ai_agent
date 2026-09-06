@@ -9,7 +9,7 @@ import { THEME_LABEL } from "@/lib/themeLabels";
 
 interface CourseCardProps {
   course: Course;
-  pollen: WeatherData["pollen"];
+  pollen?: WeatherData["pollen"];
 }
 
 const DIFFICULTY_LABEL: Record<Course["difficulty"], string> = {
@@ -19,7 +19,7 @@ const DIFFICULTY_LABEL: Record<Course["difficulty"], string> = {
 };
 
 export default function CourseCard({ course, pollen }: CourseCardProps) {
-  const pollenWarning = hasPollenWarning(course, pollen);
+  const pollenWarning = pollen ? hasPollenWarning(course, pollen) : false;
   const showBottom = course.night_safe || pollenWarning;
   const [fav, setFav] = useState(false);
 

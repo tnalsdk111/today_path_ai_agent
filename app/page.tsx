@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import WeatherBox from "@/components/WeatherBox";
+import WeatherBox, { WeatherBoxError, WeatherBoxLoading } from "@/components/WeatherBox";
 import DongSelector from "@/components/DongSelector";
 import FilterPanel from "@/components/FilterPanel";
 import CourseCard from "@/components/CourseCard";
@@ -12,14 +12,15 @@ import { filterCourses } from "@/lib/filterCourses";
 import { scoreCourse, buildWeights } from "@/lib/scoreCourse";
 import { Course, WeatherData } from "@/types/index";
 import coursesData from "@/data/courses.json";
-import { MOCK_WEATHER } from "@/lib/mockWeather";
 
 const courses = coursesData as Course[];
 
 
 export default function HomePage() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-  const [fetchError, setFetchError] = useState(false);
+  const [weatherStatus, setWeatherStatus] = useState<"loading" | "ok" | "error">(
+    "loading",
+  );
 
   const dong = useFilterStore((s) => s.dong);
   const duration = useFilterStore((s) => s.duration);
@@ -40,17 +41,17 @@ export default function HomePage() {
         if (!data?.weather) throw new Error("invalid response");
         return data as WeatherData;
       })
-      .then((data) => setWeatherData(data))
-      .catch(() => {
-        setFetchError(true);
-        setWeatherData(MOCK_WEATHER);
-      });
+      .then((data) => {
+        setWeatherData(data);
+        setWeatherStatus("ok");
+      })
+      .catch(() => setWeatherStatus("error"));
   }, []);
 
   const rankedCourses: Course[] = (() => {
-    if (!dong || !weatherData) return [];
+    if (!dong) return [];
 
-    const safeCourses = weatherData.weather.is_raining
+    const safeCourses = weatherData?.weather.is_raining
       ? courses.filter((c) => !c.flood_risk)
       : courses;
 
@@ -114,8 +115,10 @@ export default function HomePage() {
         <main className="px-margin pt-md pb-xl flex flex-col gap-lg">
 
           {/* 1. WeatherBox */}
-          {weatherData === null ? (
-            <div className="h-[160px] bg-surface-container rounded-xl animate-pulse" />
+          {weatherStatus === "loading" ? (
+            <WeatherBoxLoading />
+          ) : weatherStatus === "error" || !weatherData ? (
+            <WeatherBoxError />
           ) : (
             <WeatherBox data={weatherData} />
           )}
@@ -127,7 +130,7 @@ export default function HomePage() {
           <FilterPanel />
 
           {/* 4. 코스 결과 */}
-          {dong && weatherData && (
+          {dong && (
             <section className="flex flex-col gap-md">
               <h2 className="font-h3 text-h3 text-on-surface">
                 {rankedCourses.length}개의 코스를 찾았어요
@@ -144,20 +147,13 @@ export default function HomePage() {
                       <CourseCard
                         key={course.id}
                         course={course}
-                        pollen={weatherData.pollen}
+                        pollen={weatherData?.pollen}
                       />
                     ))}
                   </div>
                 </>
               )}
             </section>
-          )}
-
-          {/* fetch 에러 안내 (개발용) */}
-          {fetchError && (
-            <p className="text-label-sm font-label-sm text-on-surface-variant text-center">
-              날씨 데이터를 불러오지 못해 목업 데이터를 사용 중입니다.
-            </p>
           )}
         </main>
 

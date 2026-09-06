@@ -14,8 +14,8 @@
     "pm25_grade": "좋음"
   },
   "pollen": {
-    "pine": "높음",
-    "birch": "보통",
-    "grass": "없음"
+    "pine": { "status": "unavailable" },
+    "oak": { "status": "unavailable" },
+    "grass": { "status": "unavailable" }
   }
 }
