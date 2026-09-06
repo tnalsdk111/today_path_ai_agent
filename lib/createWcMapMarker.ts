@@ -1,11 +1,10 @@
-/** 지도용 화장실 마커 — primary-container 원 + 흰색 wc 아이콘 */
-export function createWcMapMarkerContent(title: string): HTMLElement {
+function createRoundMapMarkerContent(iconName: string, title: string): HTMLElement {
   const wrap = document.createElement("div");
   wrap.title = title;
 
   const icon = document.createElement("span");
   icon.className = "material-symbols-outlined";
-  icon.textContent = "wc";
+  icon.textContent = iconName;
   icon.setAttribute("aria-hidden", "true");
 
   wrap.style.cssText = [
@@ -28,4 +27,14 @@ export function createWcMapMarkerContent(title: string): HTMLElement {
 
   wrap.appendChild(icon);
   return wrap;
+}
+
+/** 지도용 화장실 마커 — primary-container 원 + 흰색 wc 아이콘 */
+export function createWcMapMarkerContent(title: string): HTMLElement {
+  return createRoundMapMarkerContent("wc", title);
+}
+
+/** 지도용 공원 입구 마커 */
+export function createParkEntranceMapMarkerContent(title: string): HTMLElement {
+  return createRoundMapMarkerContent("park", title);
 }

@@ -11,7 +11,7 @@ declare global {
 /** Google Maps JS API를 한 번만 로드하고, 이후 호출은 같은 Promise를 공유한다. */
 export function loadGoogleMaps(apiKey: string): Promise<void> {
   return new Promise((resolve) => {
-    if (window.google?.maps?.geometry) {
+    if (window.google?.maps?.geometry && window.google.maps.marker) {
       resolve();
       return;
     }
