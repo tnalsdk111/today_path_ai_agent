@@ -48,18 +48,20 @@ export default function CoursePage() {
 
   if (!course) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-dvh gap-4 bg-background px-margin">
-        <p className="font-body-md text-body-md text-on-surface-variant">
-          코스를 찾을 수 없어요.
-        </p>
-        <button
-          type="button"
-          onClick={() => router.back()}
-          className="flex items-center gap-2 text-primary font-body-md text-body-md"
-        >
-          <span className="material-symbols-outlined text-[20px]">arrow_back</span>
-          뒤로가기
-        </button>
+      <div className="font-body-md text-on-surface bg-background min-h-dvh">
+        <div className="max-w-[390px] mx-auto flex flex-col items-center justify-center min-h-dvh gap-4 px-margin">
+          <p className="font-body-md text-body-md text-on-surface-variant">
+            코스를 찾을 수 없어요.
+          </p>
+          <button
+            type="button"
+            onClick={() => router.back()}
+            className="flex items-center gap-2 text-primary font-body-md text-body-md"
+          >
+            <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+            뒤로가기
+          </button>
+        </div>
       </div>
     );
   }
@@ -95,7 +97,8 @@ export default function CoursePage() {
   }
 
   return (
-    <div className="fixed inset-0 overflow-hidden">
+    <div className="fixed inset-0 bg-background">
+      <div className="relative max-w-[390px] mx-auto h-full overflow-hidden">
       {/* Full-screen map */}
       <div className="absolute inset-0">
         <CourseMap
@@ -211,6 +214,23 @@ export default function CoursePage() {
             </button>
           </div>
 
+          {/* 카카오맵 출발지 안내 */}
+          <button
+            type="button"
+            onClick={handleKakaoMap}
+            className="w-full bg-primary-container text-white rounded-full py-3 px-6 flex items-center justify-center gap-2 mb-md active:scale-95 transition-transform duration-150"
+            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+          >
+            <div className="w-[20px] h-[20px] bg-[#FEE500] rounded-sm flex items-center justify-center">
+              <span
+                style={{ color: "#191919", fontWeight: "bold", fontSize: "12px" }}
+              >
+                K
+              </span>
+            </div>
+            <span className="font-h3 text-h3">카카오맵 - 출발지 안내</span>
+          </button>
+
           {/* ── 확장 콘텐츠 (expanded) ──────────────── */}
           <div className="h-[0.5px] bg-outline-variant/30 mb-md" />
 
@@ -289,24 +309,8 @@ export default function CoursePage() {
 
           {/* 섹션 3: 이 코스의 식생 */}
           <VegetationPanel course={course} pollen={pollen} />
-
-          {/* CTA */}
-          <button
-            type="button"
-            onClick={handleKakaoMap}
-            className="w-full bg-primary-container text-white rounded-full py-3 px-6 flex items-center justify-center gap-2 active:scale-95 transition-transform duration-150"
-            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
-          >
-            <div className="w-[20px] h-[20px] bg-[#FEE500] rounded-sm flex items-center justify-center">
-              <span
-                style={{ color: "#191919", fontWeight: "bold", fontSize: "12px" }}
-              >
-                K
-              </span>
-            </div>
-            <span className="font-h3 text-h3">카카오맵으로 길찾기</span>
-          </button>
         </div>
+      </div>
       </div>
     </div>
   );
