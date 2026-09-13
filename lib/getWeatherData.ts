@@ -17,7 +17,7 @@ const AIR_URL =
 const AIR_STATION = "수지";
 
 const POLLEN_URL =
-  "https://apis.data.go.kr/1360000/HealthWthrIdxServiceV2";
+  "https://apis.data.go.kr/1360000/HealthWthrIdxServiceV3";
 /** 경기도 용인시 수지구 */
 const POLLEN_AREA_NO = "4146500000";
 const EMPTY_POLLEN: WeatherData["pollen"] = {
@@ -278,8 +278,11 @@ async function fetchKmaWeather(): Promise<Partial<WeatherData["weather"]>> {
 function getPollenBaseTime(): string {
   const kst = new Date(new Date().getTime() + 9 * 60 * 60 * 1000);
   const hours = kst.getUTCHours();
-  if (hours >= 18) return formatDate(kst) + "18";
-  if (hours >= 6) return formatDate(kst) + "06";
+  const minutes = kst.getUTCMinutes();
+  const currentMinutes = hours * 60 + minutes;
+  // 06시·18시 발표. 직후 수 분은 아직 안 올라올 수 있어 여유를 둔다.
+  if (currentMinutes >= 18 * 60 + 10) return formatDate(kst) + "18";
+  if (currentMinutes >= 6 * 60 + 10) return formatDate(kst) + "06";
   const yesterday = new Date(kst.getTime() - 24 * 60 * 60 * 1000);
   return formatDate(yesterday) + "18";
 }
@@ -307,12 +310,18 @@ function pollenIndexToLevel(value: string | number | undefined): PollenLevel | n
 
 type PollenReading = WeatherData["pollen"]["pine"];
 
+function pollenFallback(kind: keyof WeatherData["pollen"]): PollenReading {
+  return isPollenSeason(kind)
+    ? { status: "unavailable" }
+    : { status: "off_season" };
+}
+
 async function fetchKmaPollenIndex(
   kind: keyof WeatherData["pollen"],
   operation: string,
 ): Promise<PollenReading> {
   const serviceKey = process.env.KMA_API_KEY;
-  if (!serviceKey) return { status: "unavailable" };
+  if (!serviceKey) return pollenFallback(kind);
 
   try {
     const params = new URLSearchParams({
@@ -330,31 +339,52 @@ async function fetchKmaPollenIndex(
         signal: abortSignal(KMA_TIMEOUT_MS),
       },
     );
-    if (!res.ok) return { status: "unavailable" };
+    if (!res.ok) {
+      const body = await res.text().catch(() => "");
+      console.error(
+        `꽃가루 API HTTP ${res.status} (${kind}):`,
+        body.slice(0, 300),
+      );
+      return pollenFallback(kind);
+    }
 
     const json = await res.json();
+    const gatewayErr =
+      json.OpenAPI_ServiceResponse?.cmmMsgHeader?.returnAuthMsg ??
+      json.OpenAPI_ServiceResponse?.cmmMsgHeader?.errMsg;
+    if (gatewayErr) {
+      console.error(`꽃가루 API 게이트웨이 오류 (${kind}):`, gatewayErr);
+      return pollenFallback(kind);
+    }
+
     const resultCode = String(json.response?.header?.resultCode ?? "");
-    const reachedKma = resultCode === "00" || resultCode === "0" || resultCode === "03";
-    if (!reachedKma) return { status: "unavailable" };
+    const reachedKma =
+      resultCode === "00" || resultCode === "0" || resultCode === "03";
+    if (!reachedKma) {
+      console.error(
+        `꽃가루 API resultCode=${resultCode || "없음"} (${kind})`,
+        json.response?.header ?? json,
+      );
+      return pollenFallback(kind);
+    }
 
     const raw = json.response?.body?.items?.item;
     const item = Array.isArray(raw) ? raw[0] : raw;
     const level = pollenIndexToLevel(item?.today);
     if (level) return { status: "ok", level };
 
-    return isPollenSeason(kind)
-      ? { status: "unavailable" }
-      : { status: "off_season" };
-  } catch {
-    return { status: "unavailable" };
+    return pollenFallback(kind);
+  } catch (err) {
+    console.error(`꽃가루 API 호출 실패 (${kind}):`, err);
+    return pollenFallback(kind);
   }
 }
 
 async function fetchKmaPollen(): Promise<WeatherData["pollen"]> {
   const [pine, oak, grass] = await Promise.all([
-    fetchKmaPollenIndex("pine", "getPinePollenRiskIdxV2"),
-    fetchKmaPollenIndex("oak", "getOakPollenRiskIdxV2"),
-    fetchKmaPollenIndex("grass", "getWeedsPollenRiskndxV2"),
+    fetchKmaPollenIndex("pine", "getPinePollenRiskIdxV3"),
+    fetchKmaPollenIndex("oak", "getOakPollenRiskIdxV3"),
+    fetchKmaPollenIndex("grass", "getWeedsPollenRiskndxV3"),
   ]);
   return { pine, oak, grass };
 }
