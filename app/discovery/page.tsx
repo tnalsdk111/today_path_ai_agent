@@ -125,8 +125,8 @@ export default function DiscoveryPage() {
       <div className="max-w-[390px] mx-auto relative min-h-screen pb-24">
         <header className="sticky top-0 z-50 bg-surface shadow-sm px-margin py-sm flex items-center">
           <div className="flex items-center gap-2 text-h2 font-h2 text-primary">
-            <span className="material-symbols-outlined">explore</span>
-            AI 산책로 추천
+            <span className="material-symbols-outlined">energy_savings_leaf</span>
+            오늘의 길
           </div>
         </header>
 

@@ -3,8 +3,8 @@
 import { useRouter, usePathname } from "next/navigation";
 
 const NAV_TABS: { icon: string; label: string; href: string; activeFor: string | null }[] = [
-  { icon: "map", label: "추천", href: "/", activeFor: "/" },
-  { icon: "explore", label: "탐색", href: "/discovery", activeFor: "/discovery" },
+  { icon: "map", label: "조건 선택", href: "/", activeFor: "/" },
+  { icon: "chat_bubble", label: "AI 검색", href: "/discovery", activeFor: "/discovery" },
   { icon: "route", label: "내 경로", href: "/my-routes", activeFor: "/my-routes" },
   { icon: "person", label: "프로필", href: "/profile", activeFor: "/profile" },
 ];
@@ -24,8 +24,8 @@ export default function BottomNav() {
             onClick={() => router.push(href)}
             className={
               active
-                ? "flex flex-col items-center gap-0.5 bg-secondary-container text-primary rounded-full px-4 py-1"
-                : "flex flex-col items-center gap-0.5 text-secondary p-2"
+                ? "flex flex-col items-center gap-0.5 bg-secondary-container text-primary rounded-full px-3 py-1 whitespace-nowrap"
+                : "flex flex-col items-center gap-0.5 text-secondary p-2 whitespace-nowrap"
             }
           >
             <span

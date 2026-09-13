@@ -88,26 +88,10 @@ export default function HomePage() {
       <div className="max-w-[390px] mx-auto relative min-h-screen pb-24">
 
         {/* TopAppBar */}
-        <header className="sticky top-0 z-50 bg-surface shadow-sm px-margin py-sm flex items-center justify-between">
+        <header className="sticky top-0 z-50 bg-surface shadow-sm px-margin py-sm flex items-center">
           <div className="flex items-center gap-2 text-h2 font-h2 text-primary">
             <span className="material-symbols-outlined">energy_savings_leaf</span>
             오늘의 길
-          </div>
-          <div className="flex items-center">
-            <button
-              type="button"
-              className="p-2 text-on-surface-variant rounded-full hover:bg-secondary-container/50"
-              aria-label="알림"
-            >
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <button
-              type="button"
-              className="p-2 text-on-surface-variant rounded-full hover:bg-secondary-container/50"
-              aria-label="검색"
-            >
-              <span className="material-symbols-outlined">search</span>
-            </button>
           </div>
         </header>
 
