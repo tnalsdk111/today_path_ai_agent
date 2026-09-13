@@ -189,7 +189,10 @@ export default function CoursePage() {
           )}
 
           {/* POI 토글 버튼 */}
-          <div className="flex gap-2 mt-sm mb-md">
+          <div className="flex items-center gap-2 mt-sm mb-md">
+            <span className="font-label-sm text-label-sm text-on-surface-variant shrink-0">
+              위치:
+            </span>
             <button
               type="button"
               onClick={() => setShowToilets((v) => !v)}
